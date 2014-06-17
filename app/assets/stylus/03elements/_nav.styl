@@ -1,0 +1,134 @@
+/* nav */
+
+
+mixNav($color = $kuler1, $textColor = #fff) {
+	list-style: none; margin:0; padding: 0;
+	font-size: 1.5rem;
+	li a {
+		margin: 0; padding:1em; display: block;
+		line-height:1em;
+		color: $textColor;
+		text-shadow(0 1px 1px darken($color, 20%));
+		&:hover, &:focus {
+			background: darken($color, 5%);
+			text-decoration: none;
+		}
+	}
+}
+
+horizontalNav($color = $kuler1, $textColor = #fff) {
+	mixNav($color, $textColor);
+	height:3em;
+  background: $color;
+	z-index:10;
+	li { float: left; margin: 0 0 0 2em; height:3em;}
+}
+
+verticalNav($color = #5c5c5c, $textColor = #fff) {
+	mixNav($color, $textColor);
+	border-bottom: 1px solid lighten($color, 5%);
+  background:$color;
+	li a {
+		border-bottom: 1px solid darken($color, 5%);
+		border-top: 1px solid lighten($color, 5%);
+	}
+}
+mixSidemenu($color = #5c5c5c, $textColor = #fff) {
+	html {
+		overflow-x:hidden;
+	}
+	.sidemenu {
+		position:fixed;
+		top:0;
+		height:100%;
+		z-index:999;
+		width:244px;
+		background:$color;
+	  left:-244px;
+	  right:auto;
+	  z-index: 10;
+	  border-box();
+	  inner-shadow(0 -10px 50px #444);
+	  transition: left 500ms ease-in-out;
+	  nav { overflow: auto; height: 100%; position: relative;
+		  ul {
+		  	verticalNav($color);
+	  	}
+		}
+	}
+	body:target .sidemenu {
+		left:0px;
+	}
+	body #page {
+	    position:relative; 
+	    left:0;
+	  transition (left 500ms ease-in-out);
+	}
+	body:target #page{ 
+		position:relative; 
+		left:244px; 
+		width:100%; 
+	}
+	[href*="#sidemenu"], 
+	[href*="#sidemenu"]:focus { 
+		outline:none; 
+		background: lighten($color, 20%);
+		color:#fff;
+		border-radius: 0 5px 5px 0;
+		size(40px, 40px);
+		position:absolute;
+		top:10px;
+		left:244px;
+		line-height:40px;
+		text-align:center;
+		z-index: 1000;
+		&:before {
+			mixIconSrc($icon-arrow-right, $textColor, 20px);
+			margin:0;
+		}
+	}
+	[href*="#sidemenu"]:hover {
+		text-decoration:none;
+		background: lighten($color, 15%);
+	}
+	[href="#sidemenu"] {
+		display:block; 
+	}
+	body:target [href="#sidemenu"], 
+	[href="#sidemenuclose"] { 
+		display:none; 
+	}
+	body:target [href="#sidemenuclose"] { 
+		display:inline-block; 
+		&:before {
+			content: $icon-arrow-left;
+		}
+	}
+}
+
+mixTabs($bgcolor = #fff, $text-color = $textColor) {
+  list-style: none; margin:0; padding: 0;
+  font-size: 1.5rem;
+  border-bottom:1px solid $lineColor;
+	height:2.2em;
+  li { 
+    float: left; margin: 0 0 0 0.5em; height:2.2em;
+    a {
+      margin: 0; padding:0.6em 1.2em; display: block;
+      background:$bgcolor;
+      line-height:1em;
+      border-radius(4px 4px 0 0);
+      &:hover, &:focus {
+        text-decoration: none;
+        background: darken($bgcolor, 5%);
+      }
+      &.current, &.current:hover, &.current:focus {
+        border:1px solid $lineColor;
+        border-bottom: $bgcolor;
+        cursor: default;
+        background: $bgcolor;
+        color: $text-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+include elements/gallery
+include elements/forms
+include elements/slider
+include elements/nav
+doctype html
+html(lang="en")
+  - var title = config.es.page.title
+  - var description = config.es.page.description
+  - var devBy = "Desarrollado por Jonathan Katz";
+  include includes/head_snippets
+  body
+    
+    header
+      nav
+        +nav('nav-site', config.es.nav)
+    block content
+    include includes/foot_snippets

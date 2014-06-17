@@ -1,0 +1,31 @@
+body.docs
+  background $kuler1
+  header
+    right auto
+    left 0
+    top 0
+    bottom 0
+    height 100%
+    float none
+    position fixed
+    background #fff
+  
+  p, ul
+    color #fff
+  pre
+    background lighten($kuler1, 10%)
+    border-left-color $kuler4
+    color $kuler4
+  a
+    color $kuler2
+  .folder
+    ul
+      margin 0.3em 0 0
+      padding-left 1.3em
+      li
+        mixIcon($icon-folder-open)
+        list-style none
+        margin-bottom .3em
+        &:before
+          top 8px
+          left 0px
