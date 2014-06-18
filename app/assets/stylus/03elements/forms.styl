@@ -8,63 +8,6 @@ form
       font-size 2rem
       font-family $titleFont
       line-height 3em
-  p  
-    clear left
-    font-size 1.6rem
-    label   
-      font-size 1.6rem
-      font-family $titleFont
-      line-height 30px
-      .req  
-        font-size 1rem
-        position relativetop -5px
-    input[type="text"], 
-    input[type="number"], 
-    input[type="email"], 
-    input[type="password"], 
-    select  
-      width 90%
-      box-sizing(border-box)
-      padding 5px
-      border 1px solid $lineColor
-      border-radius(4px)
-      height 2.5em
-      line-height 2.5em
-      font-size 1.4rem
-      transition (all 100ms ease-in-out)
-      &:focus  
-        box-shadow 0 0 5px rgba(0, 0, 0, 0.5)
-    input[type="checkbox"]  
-      width auto
-      border 1px solid  $lineColor
-    input[type="radio"]  
-      width auto
-    textarea  
-      width 90%
-      border-box()
-      padding 5px
-      border 1px solid $lineColor
-      font-size 1.4rem
-      border-radius(4px)
-      transition all 100ms ease-in-out
-      resize vertical
-      min-height 6em
-      max-height 30em
-      &:focus  
-        box-shadow 0 0 5px rgba(0, 0, 0, 0.5)
-    input[type="submit"], 
-    button  
-      mixButton()
-    &.checkbox  
-      height auto
-      label  
-        line-height 19px 
-        margin-right 1em
-        width auto
-        text-align left
-      input  
-        width auto
-        margin 4px 0.5em 0 
 
 /* hForm
 -------------------------------------------------------------- */
@@ -92,9 +35,6 @@ mixFormHorizontal()
         margin-right 1em
         display inline
         float none
-    input[type="submit"],
-    button 
-      margin-left 30%
 
 /* vForm
 -------------------------------------------------------------- */
@@ -104,21 +44,6 @@ mixFormVertical()
       display block
     &.checkbox label
       display inline
-
-/* alert
--------------------------------------------------------------- */
-
-alertBox($color = #333) 
-  border-radius(4px)
-  padding 1em
-  margin 1em
-  background lighten($color, 35%)
-  border $color
-  color $color
-  span
-    font-weight bold
-    text-transform uppercase
-
 
 /* user
 -------------------------------------------------------------- */
@@ -164,7 +89,7 @@ mixFormSearch()
     background #fff
     padding 5px
     margin-right 10px
-    border-radius(3px) 
+    border-radius 3px
     width 150px
   button  
     mixButton(1.9)

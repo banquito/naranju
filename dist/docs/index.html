@@ -394,7 +394,7 @@ consectetur adipiscing elit.</p>
             </li>
             <li><a href="#jade">jade</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -430,7 +430,7 @@ consectetur adipiscing elit.</p>
                 <label for="info">Acepto los términos y condiciones</label>
               </p>
               <p>
-                <button class="button-big">Enviar</button>
+                <button class="button">Enviar</button>
               </p>
             </form>
           </div>
@@ -466,7 +466,7 @@ form.hform  { .mixFormHorizontal(); }</code></pre>
             </li>
             <li><a href="#jade">jade</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -480,8 +480,8 @@ form.hform  { .mixFormHorizontal(); }</code></pre>
                 <input type="text" id="email" name="email" value=""/>
               </p>
               <p>
-                <label for="asunto">Pais</label>
-                <select id="asunto" name="asunto">
+                <label for="asuntov">Pais</label>
+                <select id="asuntov" name="asuntov">
                   <option value="ar">Argentina</option>
                   <option value="br">Brasil</option>
                   <option value="uy">Uruguay</option>
@@ -492,17 +492,17 @@ form.hform  { .mixFormHorizontal(); }</code></pre>
                 <textarea id="Mensaje" name="Mensaje"></textarea>
               </p>
               <p class="checkbox">
-                <input type="radio" id="sexo_h" name="sexo" value="h"/>
-                <label for="sexo_h">Hombre</label>
-                <input type="radio" id="sexo_m" name="sexo" value="m"/>
-                <label for="sexo_m">Mujer</label>
+                <input type="radio" id="sexov_h" name="sexov" value="h"/>
+                <label for="sexov_h">Hombre</label>
+                <input type="radio" id="sexov_m" name="sexov" value="m"/>
+                <label for="sexov_m">Mujer</label>
               </p>
               <p class="checkbox">
-                <input type="checkbox" id="info" name="info" value="1"/>
-                <label for="info">Acepto los términos y condiciones</label>
+                <input type="checkbox" id="infov" name="infov" value="1"/>
+                <label for="infov">Acepto los términos y condiciones</label>
               </p>
               <p>
-                <button class="button-big">Enviar</button>
+                <button class="button">Enviar</button>
               </p>
             </form>
           </div>
@@ -538,36 +538,38 @@ form.vform  { .mixFormVertical(); }</code></pre>
             </li>
             <li><a href="#jade">jade</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
-            <div class="alert-box alert-error"><span>Error:</span> Reemplaza esta alerta por tu HTML.</div>
-            <div class="alert-box alert-success"><span>Success:</span> Reemplaza esta alerta por tu HTML.</div>
-            <div class="alert-box alert-warning"><span>Warning:</span> Reemplaza esta alerta por tu HTML.</div>
-            <div class="alert-box alert-notice"><span>Notice:</span> Reemplaza esta alerta por tu HTML.</div>
+            <div class="flash error"><strong>Error:</strong> Reemplaza esta alerta por tu HTML.</div>
+            <div class="flash success"><strong>Success:</strong> Reemplaza esta alerta por tu HTML.</div>
+            <div class="flash warning"><strong>Warning:</strong> Reemplaza esta alerta por tu HTML.</div>
+            <div class="flash notice"><strong>Notice:</strong> Reemplaza esta alerta por tu HTML.</div>
           </div>
           <div class="pane code">
-            <pre><code>.alert-box.alert-error
-  span Error:
+            <pre><code>.flash.error
+  strong Error:
   |  Reemplaza esta alerta por tu HTML.
-.alert-box.alert-success
-  span Success:
+.flash.success
+  strong Success:
   |  Reemplaza esta alerta por tu HTML.
-.alert-box.alert-warning
-  span Warning:
+.flash.warning
+  strong Warning:
   |  Reemplaza esta alerta por tu HTML.
-.alert-box.alert-notice
-  span Notice:
+.flash.notice
+  strong Notice:
   |  Reemplaza esta alerta por tu HTML.</code></pre>
           </div>
           <div class="pane code">
-            <pre><code>.alert-box { 
-  &[class*="error"]   { .alertBox(@errorColor); }
-  &[class*="success"] { .alertBox(@successColor); }
-  &[class*="warning"] { .alertBox(@warningColor); }
-  &[class*="notice"]  { .alertBox(@noticeColor); }
-}</code></pre>
+            <pre><code>.flash
+  flash()
+  &.warning
+    flash-skin(#f3a641)
+  &.success
+    flash-skin(#aece4e)
+  &.error
+    flash-skin(#e77755)</code></pre>
           </div>
         </div>
       </article>
@@ -580,7 +582,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
           </li>
           <li><a href="#json">json</a>
           </li>
-          <li><a href="#less">less</a>
+          <li><a href="#stylus">stylus</a>
           </li>
         </ul>
         <div class="pane">
@@ -635,7 +637,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
             </li>
             <li><a href="#json">json</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -678,7 +680,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
             </li>
             <li><a href="#json">json</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -722,7 +724,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
             </li>
             <li><a href="#json">json</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -770,7 +772,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
             </li>
             <li><a href="#json">json</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -832,13 +834,11 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li>HTML5 y CSS3</li>
 <li>Responsive or Adaptive based on need. </li>
 <li>Configurable. </li>
-<li>Built on Less so you can develop on Less. </li>
-<li>Without pre defined classes</li>
+<li>Built on Stylus so you can develop on Stylus. </li>
 <li>Ordained and Extendible</li>
 <li>No Junk Codes</li>
 <li>Easy to learn </li>
 <li>It includes a JS library for forms, modales, sliders, tooltips tabs and more</li>
-<li>The CSS base compilator weighs only 7.4k</li>
 </ul>
 <h2 id="javascript-resources">JavaScript Resources</h2>
 <ul>
@@ -846,10 +846,10 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li><a href="http://jquerytools.org">jQuery tools</a> (incluye: Tabs, Tooltip, Form Tools, Toolbox.)</li>
 <li><a href="http://flexslider.woothemes.com/">flexSlider2</a></li>
 <li><a href="http://code.google.com/p/html5shim/">html5shim</a></li>
-<li><a href="http://lesscss.org/">less</a></li>
+<li><a href="http://learnboost.github.io/stylus/">stylus</a></li>
 <li><a href="http://jade-lang.com">jade</a></li>
 </ul>
-<h2 id="less-resources">Less Resources</h2>
+<h2 id="stylus-resources">Stylus Resources</h2>
 <ul>
 <li>Surround Variables<ul>
 <li>Colors </li>
@@ -862,7 +862,6 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li>Horizontal o Vertical form definition.</li>
 <li>Pack to generate Recurrent Codes. This is like executing functions in CSS.<ul>
 <li><a href="http://semantic.gs/">semantic.gs</a> grid.</li>
-<li><a href="http://lessprefixer.com/">LESS Prefixer</a> CSS3.</li>
 <li>Buttons.</li>
 <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons.</li>
 </ul>
@@ -881,12 +880,13 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <h2 id="installation">Installation</h2>
 <p><strong>Attention: To be able to use this server, you need to have <a href="http://nodejs.org">nodejs</a> installed.</strong></p>
 <h5 id="dashboard-">Dashboard:</h5>
-<pre><code>git clone https://github.com/tiko2015/naranju.git
-cd naranju
+<pre><code>git clone https://github.com/tiko2015/naranju2.git
+cd naranju2
 npm install
-node server</code></pre>
+grunt build
+grunt server watch</code></pre>
 <h5 id="navigator-">Navigator:</h5>
-<pre><code>http://127.0.0.1:3000</code></pre>
+<pre><code>http://localhost:3000</code></pre>
 <p>Run this application on heroku.com:</p>
 <pre><code>heroku apps:create example
 git push heroku master
@@ -899,12 +899,12 @@ heroku open</code></pre>
 <p>If this one already exists, it looks for the same files in the models folder using the extension .html.json, it will compile and return the requested html.</p>
 <p>At the same time, it creates the requested file in Public folder.</p>
 <p>If the file would not exist, the server would try to find it in the Public folder, and if still not there, it will then show a 404 error. </p>
-<p>If using Less, you do the same procedure.</p>
-<p>Meaning that the call to style.css would compile less/style.css.less with all its includes and it will return a page of unique styles.</p>
+<p>If using stylus, you do the same procedure.</p>
+<p>Meaning that the call to style.css would compile stylus/style.css.styl with all its includes and it will return a page of unique styles.</p>
 <blockquote>
-<p><strong>NOTE:</strong> Idle sites could be generated if less &amp; views folders are not included in the production Server.</p>
+<p><strong>NOTE:</strong> Idle sites could be generated if stylus &amp; views folders are not included in the production Server.</p>
 </blockquote>
-<h2 id="how-to-work-with-less-in-snippets">How to work with Less in Snippets</h2>
+<h2 id="how-to-work-with-stylus-in-snippets">How to work with stylus in Snippets</h2>
 <p>Please know that this tool should be helpful in implementing your project.</p>
 <p>Therefore, using a structure like Shippets should not intimidate you. You should be able to adapt and customize this tool it to your needs.</p>
 <p>To begin utilizing Shippets, you need to know the structure of the directories.</p>
@@ -924,10 +924,10 @@ heroku open</code></pre>
 </li>
 </ul>
 </li>
-<li><strong>less</strong> (here is where you find these files.  less, is not necessary for production)<ul>
+<li><strong>stylus</strong> (here is where you find these files.  stylus, is not necessary for production)<ul>
 <li><strong>lib</strong><ul>
 <li><strong>01core</strong> (letter case, reset, mixins and other general configurations)</li>
-<li><strong>02extends</strong> (less libraries to help you  code creating)</li>
+<li><strong>02extends</strong> (stylus libraries to help you  code creating)</li>
 <li><strong>03elements</strong> (specific site element definition)</li>
 </ul>
 </li>
@@ -955,23 +955,23 @@ heroku open</code></pre>
 </ul>
 </li>
 </ul>
-<p>Start by opening the <em>&#39;less/style.less&#39;</em> file.</p>
+<p>Start by opening the <em>&#39;stylus/style.styl&#39;</em> file.</p>
 <p>Here you will find all the files needed for your task, and in their loading sequence.</p>
-<p>For reading purposes, all directories are numbered. Nevertheless, each task has different requirements, qnd this sequence can be altered based on your needs. </p>
-<p>To remove files, you don’t need to erase them. You can comment them same as in <em>&#39;reset.less&#39;</em>:</p>
+<p>For reading purposes, all directories are numbered. Neverthestylus, each task has different requirements, qnd this sequence can be altered based on your needs. </p>
+<p>To remove files, you don’t need to erase them. You can comment them same as in <em>&#39;reset.styl&#39;</em>:</p>
 <pre><code>...
-//@import &quot;01core/reset.less&quot;;
-@import &quot;01core/normalize.less&quot;;
+//@import &quot;01core/reset.styl&quot;;
+@import &quot;01core/normalize.styl&quot;;
 ...</code></pre>
-<p>Another file where we are committed to working extensively is <em>04layout/all.less</em>.</p>
+<p>Another file where we are committed to working extensively is <em>04layout/all.styl</em>.</p>
 <p>Here you will find lines that shape the HTML. i.e, <em>&#39;index.html&#39;</em></p>
-<p>If you are not familiar with <strong>less</strong> yet, this is a good time to <a href="http://lesscss.org/">take a tour</a>.</p>
+<p>If you are not familiar with <strong>stylus</strong> yet, this is a good time to <a href="http://styluscss.org/">take a tour</a>.</p>
 <p>When beginning a new project or task, you can delete all styles and start utilizing <em>&#39;clean.html&#39;</em>. 
 The only definitions in this file are the calls are the calls to the scripts needed for <strong>snippets</strong> development.</p>
 <h4 id="mixins-user-">Mixins User:</h4>
-<p>One of the biggest advantages of creating CSS with less is the possibility of using mixins.</p>
+<p>One of the biggest advantages of creating CSS with stylus is the possibility of using mixins.</p>
 <p>This allows us to define a series of attributes for one element.  Further, you can add variables.</p>
-<p>Let’s check an example of our file <em>&#39;lib/01core/mixins.less&#39;</em></p>
+<p>Let’s check an example of our file <em>&#39;lib/01core/mixins.styl&#39;</em></p>
 <pre><code>.size (@width: 400, @height: 200) {
   width: @width * 1px;
   height: @height * 1px;
@@ -990,8 +990,8 @@ The only definitions in this file are the calls are the calls to the scripts nee
 <p>Buttons is an extension that allows you to create botonos for links and inputs for forms.</p>
 <p>It also allows you define the background color and size.</p>
 <p>Check it out, modify it and use it as you please!</p>
-<p>With css3.less you can make the properties  of the new version compatible so that you don’t have to write prefixes for every navigator.</p>
-<p>See how to use it in <a href="http://lessprefixer.com/">LESS Prefixer</a> </p>
+<p>With css3.styl you can make the properties  of the new version compatible so that you don’t have to write prefixes for every navigator.</p>
+<p>See how to use it in <a href="http://stylusprefixer.com/">stylus Prefixer</a> </p>
 <p>As a table system, <strong>snippets</strong> adopts the 12 column method. Learn how to use <a href="http://semantic.gs/">semantic.gs</a> which is very well explained and documented.</p>
 <p><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> is a family of standard icons to help you graph buttons, links, alerts, etc.</p>
 <h4 id="elements-layouts-and-sources">Elements, layouts and sources</h4>
@@ -999,7 +999,7 @@ The only definitions in this file are the calls are the calls to the scripts nee
 <p>In layouts we define the general rules to responsive. </p>
 <p>Themes is where you will find all the particular styles for your task.</p>
 <h4 id="reccommendations">Reccommendations</h4>
-<p>Use less from a local Server. Installing it in any operating system is a simple task.</p>
+<p>Use stylus from a local Server. Installing it in any operating system is a simple task.</p>
 <h2 id="jade">Jade</h2>
 <p>While we are preparing the documentation, you can go to <a href="http://jade-lang.com/reference/">documentación</a> of <a href="http://jade-lang.com/">jade</a>.</p>
 

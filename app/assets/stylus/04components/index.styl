@@ -1,7 +1,19 @@
 /* all */
 
-/* theme inline */
-
+@import "buttons.styl";
+@import "checkbox.styl";
+@import "flashes.styl";
+@import "icons.styl";
+@import "inputs.styl";
+@import "labels.styl";
+@import "navbar.styl";
+@import "navigation.styl";
+@import "pagination.styl";
+@import "radio.styl";
+@import "select.styl";
+@import "tables.styl";
+@import "tabs.styl";
+@import "textarea.styl";
 
 // 01 core
 
@@ -44,7 +56,7 @@
 
 
 // 02 extends
-
+/*
 [class*="button"] 
   mixButton()
 .button-small     
@@ -61,7 +73,7 @@
   mixButtonColor($warningColor)
 .button-notice    
   mixButtonColor($noticeColor)
-
+*/
 // 03 elements
 
 form.hform
@@ -121,14 +133,13 @@ form.vform
   verticalNav()
 .nav-vertical-light 
   verticalNav($kuler2, $kuler1)
-.tabs
-  mixTabs()
+/*.tabs
+  mixTabs()*/
 
 
 .panes
   div
     padding 1em
-
 
 // layout
 .clear 
@@ -217,8 +228,8 @@ form.vform
   navigation()
 .pagination
   pagination()
-/*.tabs
-  tabs()*/
+.tabs
+  tabs()
 /*-------------------------------------- */
 /* [Labels] */
 /*-------------------------------------- */
@@ -245,6 +256,9 @@ label
 /*  [ Text Inputs ] */
 /*--------------------------------------- */
 input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type="number"]
   input()
 textarea
   textarea()

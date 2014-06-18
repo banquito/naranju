@@ -394,7 +394,7 @@ consectetur adipiscing elit.</p>
             </li>
             <li><a href="#jade">jade</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -466,7 +466,7 @@ form.hform  { .mixFormHorizontal(); }</code></pre>
             </li>
             <li><a href="#jade">jade</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -538,36 +538,38 @@ form.vform  { .mixFormVertical(); }</code></pre>
             </li>
             <li><a href="#jade">jade</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
-            <div class="alert-box alert-error"><span>Error:</span> Reemplaza esta alerta por tu HTML.</div>
-            <div class="alert-box alert-success"><span>Success:</span> Reemplaza esta alerta por tu HTML.</div>
-            <div class="alert-box alert-warning"><span>Warning:</span> Reemplaza esta alerta por tu HTML.</div>
-            <div class="alert-box alert-notice"><span>Notice:</span> Reemplaza esta alerta por tu HTML.</div>
+            <div class="flash error"><strong>Error:</strong> Reemplaza esta alerta por tu HTML.</div>
+            <div class="flash success"><strong>Success:</strong> Reemplaza esta alerta por tu HTML.</div>
+            <div class="flash warning"><strong>Warning:</strong> Reemplaza esta alerta por tu HTML.</div>
+            <div class="flash notice"><strong>Notice:</strong> Reemplaza esta alerta por tu HTML.</div>
           </div>
           <div class="pane code">
-            <pre><code>.alert-box.alert-error
-  span Error:
+            <pre><code>.flash.error
+  strong Error:
   |  Reemplaza esta alerta por tu HTML.
-.alert-box.alert-success
-  span Success:
+.flash.success
+  strong Success:
   |  Reemplaza esta alerta por tu HTML.
-.alert-box.alert-warning
-  span Warning:
+.flash.warning
+  strong Warning:
   |  Reemplaza esta alerta por tu HTML.
-.alert-box.alert-notice
-  span Notice:
+.flash.notice
+  strong Notice:
   |  Reemplaza esta alerta por tu HTML.</code></pre>
           </div>
           <div class="pane code">
-            <pre><code>.alert-box { 
-  &[class*="error"]   { .alertBox(@errorColor); }
-  &[class*="success"] { .alertBox(@successColor); }
-  &[class*="warning"] { .alertBox(@warningColor); }
-  &[class*="notice"]  { .alertBox(@noticeColor); }
-}</code></pre>
+            <pre><code>.flash
+  flash()
+  &.warning
+    flash-skin(#f3a641)
+  &.success
+    flash-skin(#aece4e)
+  &.error
+    flash-skin(#e77755)</code></pre>
           </div>
         </div>
       </article>
@@ -580,7 +582,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
           </li>
           <li><a href="#json">json</a>
           </li>
-          <li><a href="#less">less</a>
+          <li><a href="#stylus">stylus</a>
           </li>
         </ul>
         <div class="pane">
@@ -635,7 +637,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
             </li>
             <li><a href="#json">json</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -678,7 +680,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
             </li>
             <li><a href="#json">json</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -722,7 +724,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
             </li>
             <li><a href="#json">json</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -770,7 +772,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
             </li>
             <li><a href="#json">json</a>
             </li>
-            <li><a href="#less">less</a>
+            <li><a href="#stylus">stylus</a>
             </li>
           </ul>
           <div class="pane">
@@ -832,8 +834,7 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li>HTML5 y CSS3</li>
 <li>Responsive o Adaptive según la necesidad.</li>
 <li>Configurable.</li>
-<li>Construido en less para desarrollar en less.</li>
-<li>Sin classes predefinidas.</li>
+<li>Construido en Stylus para desarrollar en Stylus.</li>
 <li>Ordenado y extensible.</li>
 <li>Sin código basura.</li>
 <li>Fácil de aprender</li>
@@ -846,10 +847,10 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li><a href="http://jquerytools.org">jQuery tools</a> (incluye: Tabs, Tooltip, Form Tools, Toolbox.)</li>
 <li><a href="http://flexslider.woothemes.com/">flexSlider2</a></li>
 <li><a href="http://code.google.com/p/html5shim/">html5shim</a></li>
-<li><a href="http://lesscss.org/">less</a></li>
+<li><a href="http://learnboost.github.io/stylus/">stylus</a></li>
 <li><a href="http://jade-lang.com">jade</a></li>
 </ul>
-<h2 id="recursos-less">Recursos less</h2>
+<h2 id="recursos-stylus">Recursos Stylus</h2>
 <ul>
 <li>Variables de entorno<ul>
 <li>Colores </li>
@@ -862,7 +863,6 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li>Definición de formularios horizontales o verticales.</li>
 <li>Conjuntos de atributos para generar código recurrente. Algo asi como ejecutar funciones dentro del css.<ul>
 <li>Grilla y columnas de <a href="http://semantic.gs/">semantic.gs</a>.</li>
-<li>CSS3 de <a href="http://lessprefixer.com/">LESS Prefixer</a> .</li>
 <li>Botones.</li>
 <li>Iconos de <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>.</li>
 </ul>
@@ -881,12 +881,13 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <h2 id="instalaci-n">Instalación</h2>
 <p><strong>Atención: Para poder usar el servidor, debes tener instalado <a href="http://nodejs.org">nodejs</a>.</strong></p>
 <h5 id="en-consola-">En consola:</h5>
-<pre><code>git clone https://github.com/tiko2015/naranju.git
-cd naranju
+<pre><code>git clone https://github.com/tiko2015/naranju2.git
+cd naranju2
 npm install
-node server</code></pre>
-<h5 id="en-el-navegador-">En el navegador:</h5>
-<pre><code>http://127.0.0.1:3000</code></pre>
+grunt build
+grunt server watch</code></pre>
+<h5 id="navegar-">Navegar:</h5>
+<pre><code>http://localhost:3000</code></pre>
 <p>Correr la aplicacion en heroku.com:</p>
 <pre><code>heroku apps:create example
 git push heroku master
@@ -899,12 +900,12 @@ heroku open</code></pre>
 En el caso de existir, busca el mismo archivo en models con la extensión .html.json, compila y devuelte el html solicitado.
 Al mismo tiempo crea el archivo solicitado en la carpeta public.</p>
 <p>Si no existiera, intenta encontrarlo en public y en caso de no exitir mostrará un error 404.</p>
-<p>En el caso de less, se repite la misma mecánica. O sea que el llamado a style.css generaría que se compile less/style.css.less con todos sus include y 
+<p>En el caso de stylus, se repite la misma mecánica. O sea que el llamado a style.css generaría que se compile stylus/style.css.styl con todos sus include y 
 devolviera una hoja de estilos única.</p>
 <blockquote>
-<p><strong>NOTA:</strong> Se pueden generar sitios estaticos si no se incluyen las carpetas less y views en el servidor de producción.</p>
+<p><strong>NOTA:</strong> Se pueden generar sitios estaticos si no se incluyen las carpetas stylus y views en el servidor de producción.</p>
 </blockquote>
-<h2 id="instruccion-para-trabajar-con-less-en-snippets">Instruccion para trabajar con less en snippets</h2>
+<h2 id="instruccion-para-trabajar-con-stylus-en-snippets">Instruccion para trabajar con stylus en snippets</h2>
 <p>Lo primero que tenes que saber es que esta herramienta tiene que ser útil para tu proyecto, tomar una estructura como <strong>snippets</strong> para empezar no debe condicionarte, adaptala a tu necesidad.</p>
 <p>Para empezar a utilizar <strong>snippets</strong> es necesario conocer la estructura de directorios. Si bien la podes cambiar a tu gusto para tu proyecto es necesario entenderla para modificarla.</p>
 <p>Tené en cuenta que <strong>snippets</strong> usa una gran cantidad de recortes de código para facilitar la organización de tu proyecto. </p>
@@ -921,10 +922,10 @@ devolviera una hoja de estilos única.</p>
 </li>
 </ul>
 </li>
-<li><strong>less</strong> (aca se encuentran los archivos .less, no es necesaria para producción)<ul>
+<li><strong>stylus</strong> (aca se encuentran los archivos .styl, no es necesaria para producción)<ul>
 <li><strong>lib</strong><ul>
 <li><strong>01core</strong> (tipografias, reset, mixins y demás configuraciones generales)</li>
-<li><strong>02extends</strong> (librerías less para facilitar la creación de código)</li>
+<li><strong>02extends</strong> (librerías stylus para facilitar la creación de código)</li>
 <li><strong>03elements</strong> (definición de elementos puntuales de tu sitio)</li>
 </ul>
 </li>
@@ -952,23 +953,23 @@ devolviera una hoja de estilos única.</p>
 </ul>
 </li>
 </ul>
-<p>Lo primero que podés hacer es abrir el archivo <em>&#39;less/style.less&#39;</em>. Acá vás a encotrar todos los archivos incluidos en tu proyecto y el orden en que se cargan.</p>
+<p>Lo primero que podés hacer es abrir el archivo <em>&#39;stylus/style.styl&#39;</em>. Acá vás a encotrar todos los archivos incluidos en tu proyecto y el orden en que se cargan.</p>
 <p>Fijate que los directorios esán numerados para facilitar la lectura, de todos modos, cada proyecto tiene sus requerimentos y este orden se puede alterar 
 según las necesidades.</p>
-<p>Para quitar archivos no es necesario borrarlos, se pueden comentar como el caso de <em>&#39;reset.less&#39;</em>:</p>
+<p>Para quitar archivos no es necesario borrarlos, se pueden comentar como el caso de <em>&#39;reset.styl&#39;</em>:</p>
 <pre><code>...
-//@import &quot;01core/reset.less&quot;;
-@import &quot;01core/normalize.less&quot;;
+//@import &quot;01core/reset.styl&quot;;
+@import &quot;01core/normalize.styl&quot;;
 ...</code></pre>
-<p>Otro archivo donde nos proponemos trabajar bastante de nuestro tiempo es <em>04layout/all.less</em>.</p>
+<p>Otro archivo donde nos proponemos trabajar bastante de nuestro tiempo es <em>04layout/all.styl</em>.</p>
 <p>En él nos vamos a encontrar con algunas líneas que le dan forma al html de ejemplo que es <em>&#39;index.html&#39;</em></p>
-<p>Si todavía no conoces <strong>less</strong>, este es el momento de darte una vuelta por <a href="http://lesscss.org/">less</a>.</p>
+<p>Si todavía no conoces <strong>stylus</strong>, este es el momento de darte una vuelta por <a href="http://styluscss.org/">stylus</a>.</p>
 <p>Para empezar un proyecto nuevo, podés borrar todos estos estilos y comenzar utilizando <em>&#39;clean.html&#39;</em>. En este archivo solo están definidas las 
 llamadas a los scripts necesarios para el desarrollo con <strong>snippets</strong>.</p>
 <h4 id="usando-mixins-">Usando mixins:</h4>
-<p>Una de las grandes ventajas de crear css con less, es la posibilidad de usar <em>mixins</em>. Esto nos permite definir una serie de atributos para un elemento, 
+<p>Una de las grandes ventajas de crear css con stylus, es la posibilidad de usar <em>mixins</em>. Esto nos permite definir una serie de atributos para un elemento, 
 incluso se le pueden pasar variables.</p>
-<p>Vamos a ver un ejemplo de nuestro archivo <em>&#39;01core/mixins.less&#39;</em></p>
+<p>Vamos a ver un ejemplo de nuestro archivo <em>&#39;01core/mixins.styl&#39;</em></p>
 <pre><code>.size (@width: 400, @height: 200) {
   width: @width * 1px;
   height: @height * 1px;
@@ -987,8 +988,8 @@ incluso se le pueden pasar variables.</p>
 <p>Hasta ahora tenemos 4 extensiones definidas: buttons, css3, grid y glyphicons.</p>
 <p>Buttons es una extensión que te permite crear botonos tanto de links como inputs de formularios. Te permite definir el color de fondo, tamaño. Miralo, 
 modificalo y sualo a tu gusto.</p>
-<p>Con css3.less haces compatible las propiedades de la nueva versión sin necesidad de escribir prefijos para todos los navegadores. 
-Mirá como usarlo en <a href="http://lessprefixer.com/">LESS Prefixer</a> </p>
+<p>Con css3.styl haces compatible las propiedades de la nueva versión sin necesidad de escribir prefijos para todos los navegadores. 
+Mirá como usarlo en <a href="http://stylusprefixer.com/">stylus Prefixer</a> </p>
 <p>Como sistema de grilla <strong>snippets</strong> adopta el método de 12 columnas. Conoce la implementación de <a href="http://semantic.gs/">semantic.gs</a> que está 
 muy bien explicado y documentado.</p>
 <p><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> es una familia de iconos estándar para graficar botones, links, alertas, etc.</p>
@@ -998,7 +999,7 @@ que encontraras otros recortes de código compatibles.</p>
 <p>En layouts se definen las reglas generales para responsive.</p>
 <p>Themes es donde se encuentran todos los estilos particulares de tu desarrollo.</p>
 <h4 id="recomendaciones">Recomendaciones</h4>
-<p>Utilizá less desde un servidor local, instalarlo en cualquier sistema operativo suele ser una tarea simple.</p>
+<p>Utilizá stylus desde un servidor local, instalarlo en cualquier sistema operativo suele ser una tarea simple.</p>
 <h2 id="jade">Jade</h2>
 <p>Mientras preparamos la documentación, podés ir a la <a href="http://jade-lang.com/reference/">documentación</a> de <a href="http://jade-lang.com/">jade</a>.</p>
 

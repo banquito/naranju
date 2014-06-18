@@ -14,22 +14,26 @@ section
     margin 0
   .docs-tabs 
     border-bottom-color $kuler2
-    padding-bottom 3px
-    li a
-      background none
-      color $kuler4
-      padding 0.6em 0.6em
-      margin 0 1.2em
-      &:hover, 
-      &:focus
+    font-size 1.5rem
+    background none
+    li 
+      a
         background none
-        color $kuler2
-      &.current,
-      &.current:hover
-        border none
-        border-bottom 3px solid $kuler2
-        color $kuler2
-        background none
+        color $kuler4
+        padding 0.6em 0.6em
+        margin 0 1.2em
+        font-size 1.5rem
+        &:hover, 
+        &:focus
+          background none
+          color $kuler2
+          text-decoration none
+        &.current,
+        &.current:hover
+          border none
+          border-bottom 3px solid $kuler2
+          color $kuler2
+          background none
   .pane
     padding 1em 0.5em
     background darken($kuler1, 3%)

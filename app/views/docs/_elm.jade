@@ -5,7 +5,7 @@ article
     +nav('docs-tabs tabs', 
       [ {link:'#preview', name:"preview"}, 
         {link:'#jade', name:"jade"}, 
-        {link:'#less', name:"less"}
+        {link:'#stylus', name:"stylus"}
       ])
     div.pane
       form.hform
@@ -21,7 +21,7 @@ article
         p: +formTextarea('Mensaje', 'mensaje', '')
         p.checkbox: +formRadio('sexo', [{'label':'Hombre','value':'h'},{'label':'Mujer','value':'m'}])
         p.checkbox: +formCheckbox('info', 'Acepto los términos y condiciones', '1')
-        p: button.button-big Enviar
+        p: button.button Enviar
     div.pane.code
       pre
         code
@@ -54,23 +54,23 @@ article
     +nav('docs-tabs tabs', 
       [ {link:'#preview', name:"preview"}, 
         {link:'#jade', name:"jade"}, 
-        {link:'#less', name:"less"}
+        {link:'#stylus', name:"stylus"}
       ])
     div.pane
       form.vform
         p: +formInput('text', 'nombre', 'Nombre', '')
         p: +formInput('text', 'email', 'Correo', '')
         p: +formSelect(
-          'asunto', 'Pais', [
+          'asuntov', 'Pais', [
             {'name':'Argentina','value':'ar'},
             {'name':'Brasil','value':'br'}, 
             {'name':'Uruguay','value':'uy'}
           ]
         )
         p: +formTextarea('Mensaje', 'mensaje', '')
-        p.checkbox: +formRadio('sexo', [{'label':'Hombre','value':'h'},{'label':'Mujer','value':'m'}])
-        p.checkbox: +formCheckbox('info', 'Acepto los términos y condiciones', '1')
-        p: button.button-big Enviar
+        p.checkbox: +formRadio('sexov', [{'label':'Hombre','value':'h'},{'label':'Mujer','value':'m'}])
+        p.checkbox: +formCheckbox('infov', 'Acepto los términos y condiciones', '1')
+        p: button.button Enviar
     div.pane.code
       pre
         code
@@ -103,45 +103,47 @@ article
     +nav('docs-tabs tabs', 
       [ {link:'#preview', name:"preview"}, 
         {link:'#jade', name:"jade"}, 
-        {link:'#less', name:"less"}
+        {link:'#stylus', name:"stylus"}
       ])
     div.pane
-      .alert-box.alert-error
-        span Error:
+      .flash.error
+        strong Error:
         |  Reemplaza esta alerta por tu HTML.
-      .alert-box.alert-success
-        span Success:
+      .flash.success
+        strong Success:
         |  Reemplaza esta alerta por tu HTML.
-      .alert-box.alert-warning
-        span Warning:
+      .flash.warning
+        strong Warning:
         |  Reemplaza esta alerta por tu HTML.
-      .alert-box.alert-notice
-        span Notice:
+      .flash.notice
+        strong Notice:
         |  Reemplaza esta alerta por tu HTML.
     div.pane.code
       pre
         code
-          | .alert-box.alert-error
-          |   span Error:
+          | .flash.error
+          |   strong Error:
           |   |  Reemplaza esta alerta por tu HTML.
-          | .alert-box.alert-success
-          |   span Success:
+          | .flash.success
+          |   strong Success:
           |   |  Reemplaza esta alerta por tu HTML.
-          | .alert-box.alert-warning
-          |   span Warning:
+          | .flash.warning
+          |   strong Warning:
           |   |  Reemplaza esta alerta por tu HTML.
-          | .alert-box.alert-notice
-          |   span Notice:
+          | .flash.notice
+          |   strong Notice:
           |   |  Reemplaza esta alerta por tu HTML.
     div.pane.code
       pre
         code
-          | .alert-box { 
-          |   &[class*="error"]   { .alertBox(@errorColor); }
-          |   &[class*="success"] { .alertBox(@successColor); }
-          |   &[class*="warning"] { .alertBox(@warningColor); }
-          |   &[class*="notice"]  { .alertBox(@noticeColor); }
-          | }
+          | .flash
+          |   flash()
+          |   &.warning
+          |     flash-skin(#f3a641)
+          |   &.success
+          |     flash-skin(#aece4e)
+          |   &.error
+          |     flash-skin(#e77755)
 
 article
   h3(id="gallery") Gallery
@@ -149,7 +151,7 @@ article
     [ {link:'#preview', name:"preview"}, 
       {link:'#jade', name:"jade"}, 
       {link:'#json', name:"json"},
-      {link:'#less', name:"less"}
+      {link:'#stylus', name:"stylus"}
     ])
   div.pane
     +gallery(6, content.gallery)
@@ -192,7 +194,7 @@ article
       [ {link:'#preview', name:"preview"}, 
         {link:'#jade', name:"jade"}, 
         {link:'#json', name:"json"},
-        {link:'#less', name:"less"}
+        {link:'#stylus', name:"stylus"}
       ])      
     .pane
       +nav('nav-vertical', [{link:'#', name:'Lorem'}, {link:'#', name:'Lorem'}, {link:'#', name:'Lorem'}, {link:'#', name:'Lorem'}])
@@ -226,7 +228,7 @@ article
       [ {link:'#preview', name:"preview"}, 
         {link:'#jade', name:"jade"}, 
         {link:'#json', name:"json"},
-        {link:'#less', name:"less"}
+        {link:'#stylus', name:"stylus"}
       ])      
     .pane
       +nav('nav', [{link:'#', name:'Lorem'}, {link:'#', name:'Lorem'}, {link:'#', name:'Lorem'}, {link:'#', name:'Lorem'}])
@@ -261,7 +263,7 @@ article
       [ {link:'#preview', name:"preview"}, 
         {link:'#jade', name:"jade"}, 
         {link:'#json', name:"json"},
-        {link:'#less', name:"less"}
+        {link:'#stylus', name:"stylus"}
       ])      
     .pane
       +slider(content.slides)
@@ -294,7 +296,7 @@ article
       [ {link:'#preview', name:"preview"}, 
         {link:'#jade', name:"jade"}, 
         {link:'#json', name:"json"},
-        {link:'#less', name:"less"}
+        {link:'#stylus', name:"stylus"}
       ])      
     .pane
       +carousel(content.thumbs)

@@ -5,8 +5,7 @@
   - HTML5 y CSS3
   - Responsive o Adaptive según la necesidad.
   - Configurable.
-  - Construido en less para desarrollar en less.
-  - Sin classes predefinidas.
+  - Construido en Stylus para desarrollar en Stylus.
   - Ordenado y extensible.
   - Sin código basura.
   - Fácil de aprender
@@ -20,10 +19,10 @@
   - [jQuery tools](http://jquerytools.org) (incluye: Tabs, Tooltip, Form Tools, Toolbox.)
   - [flexSlider2](http://flexslider.woothemes.com/)
   - [html5shim](http://code.google.com/p/html5shim/)
-  - [less](http://lesscss.org/)
+  - [stylus](http://learnboost.github.io/stylus/)
   - [jade](http://jade-lang.com)
 
-  ## Recursos less
+  ## Recursos Stylus
 
   - Variables de entorno
       - Colores 
@@ -34,7 +33,6 @@
   - Definición de formularios horizontales o verticales.
   - Conjuntos de atributos para generar código recurrente. Algo asi como ejecutar funciones dentro del css.
       - Grilla y columnas de [semantic.gs](http://semantic.gs/).
-      - CSS3 de [LESS Prefixer](http://lessprefixer.com/) .
       - Botones.
       - Iconos de [Font Awesome](http://fortawesome.github.io/Font-Awesome/).
   - Elementos predefinidos.
@@ -51,14 +49,15 @@
 
   ##### En consola:
 
-      git clone https://github.com/tiko2015/naranju.git
-      cd naranju
+      git clone https://github.com/tiko2015/naranju2.git
+      cd naranju2
       npm install
-      node server
+      grunt build
+      grunt server watch
 
-  ##### En el navegador: 
+  ##### Navegar: 
 
-      http://127.0.0.1:3000
+      http://localhost:3000
 
   Correr la aplicacion en heroku.com:
 
@@ -80,12 +79,12 @@
 
   Si no existiera, intenta encontrarlo en public y en caso de no exitir mostrará un error 404.
 
-  En el caso de less, se repite la misma mecánica. O sea que el llamado a style.css generaría que se compile less/style.css.less con todos sus include y 
+  En el caso de stylus, se repite la misma mecánica. O sea que el llamado a style.css generaría que se compile stylus/style.css.styl con todos sus include y 
   devolviera una hoja de estilos única.
 
-  > **NOTA:** Se pueden generar sitios estaticos si no se incluyen las carpetas less y views en el servidor de producción.
+  > **NOTA:** Se pueden generar sitios estaticos si no se incluyen las carpetas stylus y views en el servidor de producción.
   
-  ## Instruccion para trabajar con less en snippets
+  ## Instruccion para trabajar con stylus en snippets
 
   Lo primero que tenes que saber es que esta herramienta tiene que ser útil para tu proyecto, tomar una estructura como **snippets** para empezar no debe condicionarte, adaptala a tu necesidad.
 
@@ -102,10 +101,10 @@
       - **_layouts** 
         - **includes**
         - **elements**
-  - **less** (aca se encuentran los archivos .less, no es necesaria para producción)
+  - **stylus** (aca se encuentran los archivos .styl, no es necesaria para producción)
       - **lib**
           - **01core** (tipografias, reset, mixins y demás configuraciones generales)
-          - **02extends** (librerías less para facilitar la creación de código)
+          - **02extends** (librerías stylus para facilitar la creación de código)
           - **03elements** (definición de elementos puntuales de tu sitio)
       - **themes**
           - **default** (estilos por defecto para aplicar en línea)
@@ -121,33 +120,33 @@
   </div>
   #### Por donde empezar:
 
-  Lo primero que podés hacer es abrir el archivo *'less/style.less'*. Acá vás a encotrar todos los archivos incluidos en tu proyecto y el orden en que se cargan.
+  Lo primero que podés hacer es abrir el archivo *'stylus/style.styl'*. Acá vás a encotrar todos los archivos incluidos en tu proyecto y el orden en que se cargan.
 
   Fijate que los directorios esán numerados para facilitar la lectura, de todos modos, cada proyecto tiene sus requerimentos y este orden se puede alterar 
   según las necesidades.
 
-  Para quitar archivos no es necesario borrarlos, se pueden comentar como el caso de *'reset.less'*:
+  Para quitar archivos no es necesario borrarlos, se pueden comentar como el caso de *'reset.styl'*:
 
       ...
-      //@import "01core/reset.less";
-      @import "01core/normalize.less";
+      //@import "01core/reset.styl";
+      @import "01core/normalize.styl";
       ...
       
-  Otro archivo donde nos proponemos trabajar bastante de nuestro tiempo es *04layout/all.less*.
+  Otro archivo donde nos proponemos trabajar bastante de nuestro tiempo es *04layout/all.styl*.
 
   En él nos vamos a encontrar con algunas líneas que le dan forma al html de ejemplo que es *'index.html'*
 
-  Si todavía no conoces **less**, este es el momento de darte una vuelta por [less](http://lesscss.org/).
+  Si todavía no conoces **stylus**, este es el momento de darte una vuelta por [stylus](http://styluscss.org/).
 
   Para empezar un proyecto nuevo, podés borrar todos estos estilos y comenzar utilizando *'clean.html'*. En este archivo solo están definidas las 
   llamadas a los scripts necesarios para el desarrollo con **snippets**.
 
   #### Usando mixins:
 
-  Una de las grandes ventajas de crear css con less, es la posibilidad de usar *mixins*. Esto nos permite definir una serie de atributos para un elemento, 
+  Una de las grandes ventajas de crear css con stylus, es la posibilidad de usar *mixins*. Esto nos permite definir una serie de atributos para un elemento, 
   incluso se le pueden pasar variables.
 
-  Vamos a ver un ejemplo de nuestro archivo *'01core/mixins.less'*
+  Vamos a ver un ejemplo de nuestro archivo *'01core/mixins.styl'*
 
       .size (@width: 400, @height: 200) {
         width: @width * 1px;
@@ -176,8 +175,8 @@
   Buttons es una extensión que te permite crear botonos tanto de links como inputs de formularios. Te permite definir el color de fondo, tamaño. Miralo, 
   modificalo y sualo a tu gusto.
 
-  Con css3.less haces compatible las propiedades de la nueva versión sin necesidad de escribir prefijos para todos los navegadores. 
-  Mirá como usarlo en [LESS Prefixer](http://lessprefixer.com/) 
+  Con css3.styl haces compatible las propiedades de la nueva versión sin necesidad de escribir prefijos para todos los navegadores. 
+  Mirá como usarlo en [stylus Prefixer](http://stylusprefixer.com/) 
 
   Como sistema de grilla **snippets** adopta el método de 12 columnas. Conoce la implementación de [semantic.gs](http://semantic.gs/) que está 
   muy bien explicado y documentado.
@@ -196,7 +195,7 @@
 
   #### Recomendaciones
 
-  Utilizá less desde un servidor local, instalarlo en cualquier sistema operativo suele ser una tarea simple.
+  Utilizá stylus desde un servidor local, instalarlo en cualquier sistema operativo suele ser una tarea simple.
 
   ## Jade
 
