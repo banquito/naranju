@@ -12,7 +12,7 @@ module.exports = function(grunt) {
      base: './dist'
   },
   stylus: {
-    bootstrap: {
+    compile: {
       options: {
         compress: false,
         paths: ['stylus'],
@@ -24,43 +24,13 @@ module.exports = function(grunt) {
       import: [
         'nib'
       ],
-      files: {
-        'dist/assets/css/bootstrap.css': 'app/assets/stylus/bootstrap.styl' // 1:1 compile
-      }
-    },
-
-    theme: {
-      options: {
-        compress: false,
-        paths: ['stylus'],
-        urlfunc: 'embedurl',
-        use: [
-          require('nib')
-        ]
-      },
-      import: [
-        'nib'
-      ],
-      files: {
-        'dist/assets/css/theme.css': 'app/assets/stylus/theme.styl' // 1:1 compile
-      }
-    },
-    style: {
-      options: {
-        paths: ['stylus'],
-        urlfunc: 'embedurl',
-        use: [
-          require('nib')
-        ]
-      },
-      import: [
-        'nib'
-      ],
-      files:
-        [
-          {'dist/assets/css/style.css': 'app/assets/stylus/style.styl'},
-          {'dist/assets/css/examples.css': 'app/assets/stylus/examples.styl'}
-        ]
+      files: [ {
+        cwd: "app/assets/stylus",
+        src: "*.styl",
+        dest: "dist/assets/css/",
+        expand: true,
+        ext: ".css"
+      } ]
     }
   },
 
@@ -169,9 +139,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks("grunt-contrib-jade");
 
-  grunt.registerTask('dist', ['jade','clean','stylus:bootstrap', 'stylus:style', 'cssmin:bootstrap', 'uglify']);
-  grunt.registerTask('theme', ['stylus:theme', 'cssmin:theme']);
-  grunt.registerTask('build', ['jade','clean','stylus:bootstrap', 'stylus:style', 'stylus:theme', 'cssmin:bootstrap', 'cssmin:theme', 'uglify']);
+  grunt.registerTask('dist', ['jade','clean','stylus', 'uglify']);
+  grunt.registerTask('theme', ['stylus']);
+  grunt.registerTask('build', ['jade','clean','stylus', 'uglify']);
   grunt.registerTask('server', 'Start a custom web server', function() {
       grunt.log.writeln('Started web server on port ' + grunt.config.get('server.port') );
       var base = grunt.config.get('server.base');
