@@ -161,21 +161,11 @@ body:after {
 [data-hint] {
   position: relative;
   display: inline-block;
-/**
-   * tooltip arrow
-   */
-/**
-   * tooltip body
-   */
 }
-.hint .hint:before,
-[data-hint] .hint:before,
-.hint .hint:after,
-[data-hint] .hint:after,
-.hint [data-hint]:before,
-[data-hint] [data-hint]:before,
-.hint [data-hint]:after,
-[data-hint] [data-hint]:after {
+.hint:before,
+[data-hint]:before,
+.hint:after,
+[data-hint]:after {
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -189,41 +179,29 @@ body:after {
   -ms-transition: 0.3 s ease;
   transition: 0.3 s ease;
 }
-.hint .hint:hover:before,
-[data-hint] .hint:hover:before,
-.hint .hint:hover:after,
-[data-hint] .hint:hover:after,
-.hint .hint:focus:before,
-[data-hint] .hint:focus:before,
-.hint .hint:focus:after,
-[data-hint] .hint:focus:after,
-.hint [data-hint]:hover:before,
-[data-hint] [data-hint]:hover:before,
-.hint [data-hint]:hover:after,
-[data-hint] [data-hint]:hover:after,
-.hint [data-hint]:focus:before,
-[data-hint] [data-hint]:focus:before,
-.hint [data-hint]:focus:after,
-[data-hint] [data-hint]:focus:after {
+.hint:hover:before,
+[data-hint]:hover:before,
+.hint:hover:after,
+[data-hint]:hover:after,
+.hint:focus:before,
+[data-hint]:focus:before,
+.hint:focus:after,
+[data-hint]:focus:after {
   visibility: visible;
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-.hint .hint:before,
-[data-hint] .hint:before,
-.hint [data-hint]:before,
-[data-hint] [data-hint]:before {
+.hint:before,
+[data-hint]:before {
   content: '';
   position: absolute;
   background: transparent;
   border: 6px solid transparent;
   z-index: 1000001;
 }
-.hint .hint:after,
-[data-hint] .hint:after,
-.hint [data-hint]:after,
-[data-hint] [data-hint]:after {
+.hint:after,
+[data-hint]:after {
   content: attr(data-hint);
   background: #383838;
   color: #fff;
@@ -264,8 +242,6 @@ body:after {
 .hint--top:focus:before {
   -webkit-transform: translateY(-8px);
   -moz-transform: translateY(-8px);
-  -webkit-transform: translateY(-8px);
-  -moz-transform: translateY(-8px);
   -o-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px);
@@ -285,8 +261,6 @@ body:after {
 .hint--bottom:hover:before,
 .hint--bottom:focus:after,
 .hint--bottom:focus:before {
-  -webkit-transform: translateY(8px);
-  -moz-transform: translateY(8px);
   -webkit-transform: translateY(8px);
   -moz-transform: translateY(8px);
   -o-transform: translateY(8px);
@@ -311,8 +285,6 @@ body:after {
 .hint--right:focus:before {
   -webkit-transform: translateX(8px);
   -moz-transform: translateX(8px);
-  -webkit-transform: translateX(8px);
-  -moz-transform: translateX(8px);
   -o-transform: translateX(8px);
   -ms-transform: translateX(8px);
   transform: translateX(8px);
@@ -333,8 +305,6 @@ body:after {
 .hint--left:hover:before,
 .hint--left:focus:after,
 .hint--left:focus:before {
-  -webkit-transform: translateX(-8px);
-  -moz-transform: translateX(-8px);
   -webkit-transform: translateX(-8px);
   -moz-transform: translateX(-8px);
   -o-transform: translateX(-8px);
@@ -416,16 +386,12 @@ body:after {
 .hint--always.hint--top:before {
   -webkit-transform: translateY(-8px);
   -moz-transform: translateY(-8px);
-  -webkit-transform: translateY(-8px);
-  -moz-transform: translateY(-8px);
   -o-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px);
 }
 .hint--always.hint--bottom:after,
 .hint--always.hint--bottom:before {
-  -webkit-transform: translateY(8px);
-  -moz-transform: translateY(8px);
   -webkit-transform: translateY(8px);
   -moz-transform: translateY(8px);
   -o-transform: translateY(8px);
@@ -436,16 +402,12 @@ body:after {
 .hint--always.hint--left:before {
   -webkit-transform: translateX(-8px);
   -moz-transform: translateX(-8px);
-  -webkit-transform: translateX(-8px);
-  -moz-transform: translateX(-8px);
   -o-transform: translateX(-8px);
   -ms-transform: translateX(-8px);
   transform: translateX(-8px);
 }
 .hint--always.hint--right:after,
 .hint--always.hint--right:before {
-  -webkit-transform: translateX(8px);
-  -moz-transform: translateX(8px);
   -webkit-transform: translateX(8px);
   -moz-transform: translateX(8px);
   -o-transform: translateX(8px);
@@ -460,42 +422,13 @@ body:after {
 .hint--bounce:after {
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
   -moz-transition: opacity 0.3s ease, visibility 0.3s ease, -moz-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
-  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
-  -moz-transition: opacity 0.3s ease, visibility 0.3s ease, -moz-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
   -o-transition: opacity 0.3s ease, visibility 0.3s ease, -o-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
   -ms-transition: opacity 0.3s ease, visibility 0.3s ease, -ms-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
 }
-/*
- *  Font Awesome 3.2.1
- *  the iconic font designed for Bootstrap 
- *  ------------------------------------------------------------------------------
- *  The full suite of pictographic icons, examples, and documentation can be
- *  found at http://fontawesome.io.  Stay up to date on Twitter at
- *  http://twitter.com/fontawesome.
- *
- *  License
- *  ------------------------------------------------------------------------------
- *  - The Font Awesome font is licensed under SIL OFL 1.1 -
- *    http://scripts.sil.org/OFL
- *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
- *    http://opensource.org/licenses/mit-license.html
- *  - Font Awesome documentation licensed under CC BY 3.0 -
- *    http://creativecommons.org/licenses/by/3.0/
- *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
- *    "Font Awesome by Dave Gandy - http://fontawesome.io"
- *
- *  Author - Dave Gandy
- *  ------------------------------------------------------------------------------
- *  Email = dave$fontawesome.io
- *  Twitter = http://twitter.com/davegandy
- *  Work = Lead Product Designer @ Kyruus - http://kyruus.com
- *
- *  icons = http://fontawesome.io/icons/
- */
 @font-face {
-  font-family: "FontAwesome";
-  src: url("../fonts/fontawesome-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/fontawesome-webfont.woff") format('woff'), url("../fonts/fontawesome-webfont.ttf") format('truetype'), url("../fonts/fontawesome-webfont.svg?#FontAwesome") format('svg');
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?#iefix") format('embedded-opentype'), url("../fonts/icomoon.woff") format('woff'), url("../fonts/icomoon.ttf") format('truetype'), url("../fonts/icomoon.svg?#icomoon") format('svg');
   font-style: normal;
   font-weight: normal;
 }
@@ -629,24 +562,16 @@ form fieldset legend {
   -webkit-box-shadow: 0 0 90px 5px #000;
   box-shadow: 0 0 90px 5px #000;
 }
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?#iefix") format('embedded-opentype'), url("../fonts/icomoon.woff") format('woff'), url("../fonts/icomoon.ttf") format('truetype'), url("../fonts/icomoon.svg?#icomoon") format('svg');
-  font-style: normal;
-  font-weight: normal;
-}
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
+  content: '\f005';
+  color: inherit;
+  font-size: inherit;
+  font-family: icomoon;
   font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-/* Better Font Rendering =========== */
+  font-style: normal;
+  text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .icon-glass:before {
   content: "\f000";
@@ -1871,46 +1796,25 @@ form.vform p.checkbox label {
   width: 150px;
 }
 .searchform button {
-  border: none;
   display: inline-block;
-  background: #666;
-rgba(0,0,0,0.4)
-  text-align: center;
-  line-height: 1.5em;
-  height: 1.5em;
-  color: #fff;
-  text-decoration: none;
-  vertical-align: middle;
+  padding: 6px 12px;
+  line-height: 1.3125rem;
+  -webkit-font-smoothing: antialiased;
+  border: none;
   cursor: pointer;
-  font-size: 1.9;
-  padding: 0 22.799999999999997px 0.1em;
-  -webkit-border-radius: 5.699999999999999px;
-  border-radius: 5.699999999999999px;
-  padding: 0 10px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #7f2300;
 }
 .searchform button:hover {
-  background: #6b6b6b;
   color: #fff;
+  background: #5f1a00;
   text-decoration: none;
 }
 .searchform button:active {
-  background: #616161;
-  color: #fff;
-rgba(0,0,0,0.2)
-}
-.searchform button:before {
-  content: "\f002";
-  color: inherit;
-  font-size: inherit;
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  margin-right: 0.5em;
-}
-.searchform button:before {
-  margin-right: 0;
+  background: #722000;
+  text-decoration: none;
 }
 .gallery {
   padding: 0 0 10px;
@@ -2730,13 +2634,11 @@ rgba(0,0,0,0.2)
 }
 .navigation {
   list-style: none;
-  font-size: 0;
   margin-left: 0;
   padding-left: 0;
 }
 .navigation li {
   display: inline-block;
-  font-size: 0.9375rem;
 }
 .navigation li a {
   display: inline-block;
@@ -2759,11 +2661,9 @@ rgba(0,0,0,0.2)
   display: inline-block;
   list-style: none;
   margin: 0;
-  font-size: 0;
 }
 .pagination li {
   display: inline-block;
-  font-size: 0.875rem;
   min-width: 30px;
   text-align: center;
 }
@@ -2798,14 +2698,12 @@ rgba(0,0,0,0.2)
 }
 .tabs {
   list-style: none;
-  font-size: 0;
   margin: 0;
   background: #f0f2f5;
   border-bottom: 1px solid #e5e5e5;
 }
 .tabs li {
   display: inline-block;
-  font-size: 0.875rem;
 }
 .tabs li a,
 .tabs li span {
@@ -2852,10 +2750,12 @@ label {
 }
 .button:hover {
   color: #fff;
-  background: #52a2e7;
+  background: #1e83d9;
+  text-decoration: none;
 }
 .button:active {
   background: #439be5;
+  text-decoration: none;
 }
 .button.success {
   color: #fff;
@@ -2863,10 +2763,12 @@ label {
 }
 .button.success:hover {
   color: #fff;
-  background: #a9cb43;
+  background: #89a72e;
+  text-decoration: none;
 }
 .button.success:active {
   background: #a4c838;
+  text-decoration: none;
 }
 .button.danger {
   color: #fff;
@@ -2874,10 +2776,12 @@ label {
 }
 .button.danger:hover {
   color: #fff;
-  background: #e56c47;
+  background: #d0471d;
+  text-decoration: none;
 }
 .button.danger:active {
   background: #e36139;
+  text-decoration: none;
 }
 .button.warning {
   color: #fff;
@@ -2885,10 +2789,12 @@ label {
 }
 .button.warning:hover {
   color: #fff;
-  background: #f3c340;
+  background: #e4ab0e;
+  text-decoration: none;
 }
 .button.warning:active {
   background: #f2be31;
+  text-decoration: none;
 }
 .button.pale {
   color: #555;
@@ -2896,10 +2802,12 @@ label {
 }
 .button.pale:hover {
   color: #555;
-  background: #e3e0db;
+  background: #bab2a6;
+  text-decoration: none;
 }
 .button.pale:active {
   background: #d8d4ce;
+  text-decoration: none;
 }
 .button.disabled {
   cursor: default;
@@ -2915,7 +2823,7 @@ input[type="number"] {
   padding: 5px 10px;
   border: 1px solid #e0e0e0;
   background: #fff;
-  color: #555;
+  color: #7f655a;
   outline: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3123,7 +3031,7 @@ body.docs .folder ul li:before {
   content: "\f07c";
   color: inherit;
   font-size: inherit;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3216,37 +3124,31 @@ section .pane.code pre {
   margin: 0;
 }
 section a.btn {
-  border: none;
   display: inline-block;
-  background: #401200;
-rgba(0,0,0,0.4)
-  text-align: center;
-  line-height: 1.5em;
-  height: 1.5em;
-  color: #e54000;
-  text-decoration: none;
-  vertical-align: middle;
+  padding: 6px 12px;
+  line-height: 1.3125rem;
+  -webkit-font-smoothing: antialiased;
+  border: none;
   cursor: pointer;
-  font-size: 3;
-  padding: 0 36px 0.1em;
-  -webkit-border-radius: 9px;
-  border-radius: 9px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #e54000;
+  background-color: #401200;
 }
 section a.btn:hover {
-  background: #4d2300;
   color: #e54000;
+  background: #300e00;
   text-decoration: none;
 }
 section a.btn:active {
-  background: #3f2300;
-  color: #e54000;
-rgba(0,0,0,0.2)
+  background: #3a1000;
+  text-decoration: none;
 }
 section a.btn:before {
   content: "\f01a";
   color: inherit;
   font-size: inherit;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3254,37 +3156,31 @@ section a.btn:before {
   margin-right: 0.5em;
 }
 section a.btn-git {
-  border: none;
   display: inline-block;
-  background: #401200;
-rgba(0,0,0,0.4)
-  text-align: center;
-  line-height: 1.5em;
-  height: 1.5em;
-  color: #e54000;
-  text-decoration: none;
-  vertical-align: middle;
+  padding: 6px 12px;
+  line-height: 1.3125rem;
+  -webkit-font-smoothing: antialiased;
+  border: none;
   cursor: pointer;
-  font-size: 3;
-  padding: 0 36px 0.1em;
-  -webkit-border-radius: 9px;
-  border-radius: 9px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #e54000;
+  background-color: #401200;
 }
 section a.btn-git:hover {
-  background: #4d2300;
   color: #e54000;
+  background: #300e00;
   text-decoration: none;
 }
 section a.btn-git:active {
-  background: #3f2300;
-  color: #e54000;
-rgba(0,0,0,0.2)
+  background: #3a1000;
+  text-decoration: none;
 }
 section a.btn-git:before {
   content: "\f113";
   color: inherit;
   font-size: inherit;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3412,7 +3308,7 @@ header [href*="/"]:after {
   content: "\f062";
   color: #999;
   font-size: 0.9em;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3423,7 +3319,7 @@ header [href*="docs"]:after {
   content: "\f0f6";
   color: #999;
   font-size: 0.9em;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3434,7 +3330,7 @@ header [href*="descargar"]:after {
   content: "\f01a";
   color: #999;
   font-size: 0.9em;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3445,7 +3341,7 @@ header [href*="lang"]:after {
   content: "\f024";
   color: #999;
   font-size: 0.9em;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3574,7 +3470,7 @@ article footer [href*="github"]:before {
   content: "\f113";
   color: inherit;
   font-size: inherit;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3585,7 +3481,7 @@ article footer [href*="linkedin"]:before {
   content: "\f08c";
   color: inherit;
   font-size: inherit;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3596,7 +3492,7 @@ article .ico-doc:before {
   content: "\f0f6";
   color: inherit;
   font-size: inherit;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -3607,7 +3503,7 @@ article .ico-url:before {
   content: "\f0ac";
   color: inherit;
   font-size: inherit;
-  font-family: FontAwesome;
+  font-family: icomoon;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;

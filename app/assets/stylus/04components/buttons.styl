@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------ */
 /*  [ Button Structure ] */
 /*------------------------------------------------------------------ */
-button($background = #76b6ec, $color = white)
+button($background = $kuler2, $color = white)
   display: inline-block
   padding: 6px 12px
   line-height: 1.3125rem
@@ -18,6 +18,8 @@ button-skin($background, $color)
   background-color: $background
   &:hover
     color: $color
-    background: darken($background, 5%)
+    background: darken($background, 25%)
+    text-decoration: none
   &:active
     background: darken($background, 10%)
+    text-decoration: none
