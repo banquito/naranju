@@ -13,7 +13,7 @@ html(lang="en")
       a(href="#sidemenu")
       a(href="#sidemenuclose")
       nav
-        aside.userlogin
+        aside.user-box
           - if(config.user !== 'null')
             figure
               - if(config.user.image)
@@ -21,6 +21,8 @@ html(lang="en")
             h4= config.user.name
             p= config.user.provider + ' | '
               a(href="#") Signout
+        +search_form('#', 'Buscar')
+
         +nav('', config.nav)
     #page
       .wrapper

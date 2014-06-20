@@ -1,0 +1,36 @@
+/* nav */
+
+navigation($color = $kuler1, $textColor = #fff)
+  list-style: none; 
+  margin:0; 
+  padding: 0;
+  li a
+    margin: 0; 
+    padding:1em; 
+    display: block;
+    line-height:1em;
+    color: $textColor;
+    &:hover, 
+    &:focus
+      background: darken($color, 5%);
+      text-decoration: none;
+
+
+horizontal_navigation($color = $kuler1, $textColor = #fff)
+  navigation($color, $textColor);
+  height:3em;
+  background: $color;
+  z-index:10;
+  font-size: 1.5rem;
+  li
+    float: left; 
+    margin: 0 0 0 2em; 
+    height:3em;
+
+vertical_navigation($color = #5c5c5c, $textColor = #fff)
+  navigation($color, $textColor);
+  border-bottom: 1px solid lighten($color, 5%);
+  background:$color;
+  li a
+    border-bottom: 1px solid darken($color, 5%);
+    border-top: 1px solid lighten($color, 5%);

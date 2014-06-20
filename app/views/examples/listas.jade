@@ -10,6 +10,29 @@ block content
       section#content.span3.span-768-6
         h3 Tabs
         +tabs(content.tabs)
+
+        h3 Paginador
+        ul.pagination
+          li.prev
+            a(href="#") «
+          li 
+            a(href="#") 1
+          li 
+            a(href="#") 2
+          li 
+            a(href="#").active 3
+          li 
+            a(href="#") 4
+          li 
+            a(href="#") 5
+          li ...
+          li 
+            a(href="#") 9
+          li 
+            a(href="#") 1
+          li.next
+            a(href="#") »
+
       section#content.span3.span-768-6
         h3 Unordered lists
           ul

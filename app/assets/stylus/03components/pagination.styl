@@ -1,7 +1,8 @@
 pagination()
-  display: inline-block
+  display: block
   list-style: none
   margin: 0
+  text-align: center
   li
     display: inline-block
     min-width: 30px
@@ -16,7 +17,7 @@ pagination()
       &:hover
         background: rgb(247,247,247)
       &.active
-        background: #76b6ec
+        background: $kuler1
         cursor: default
         color: #fff
     &.prev a

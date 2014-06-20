@@ -3,7 +3,8 @@
     {"link":"/", "name":"Home"},
     {"link":"/docs/", "name":"Documentation"},
     {"link":"/descargar.html", "name":"Download"},
-    {"link":"/es/#lang", "name":"Español"}
+    {"link":"/es/#lang", "name":"Español"},
+    {"link":"/examples/", "name":"Examples"}
   ],
   "navejemplos": [ 
     {"link":"/examples/index.html", "name":"Textos"},
@@ -49,7 +50,8 @@
       {"link":"/es", "name":"Inicio"},
       {"link":"/es/docs/", "name":"Documentación"},
       {"link":"/es/descargar.html", "name":"Descargar"},
-      {"link":"/#lang", "name":"English"}
+      {"link":"/#lang", "name":"English"},
+      {"link":"/examples", "name":"Ejemplos"}
     ],
     "htmlbase": [ 
       {"link":"#titulos", "name":"titulos"},
