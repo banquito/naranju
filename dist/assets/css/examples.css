@@ -887,6 +887,27 @@ table tr {
 table tr:nth-child(odd) {
   background: #fbfbfb;
 }
+button {
+  display: inline-block;
+  padding: 6px 12px;
+  line-height: 1.3125rem;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #7f2300;
+}
+button:hover {
+  color: #fff;
+  background: #5f1a00;
+  text-decoration: none;
+}
+button:active {
+  background: #722000;
+  text-decoration: none;
+}
 form.hform p label {
   float: left;
   width: 25%;

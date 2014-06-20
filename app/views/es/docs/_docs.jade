@@ -84,13 +84,13 @@
 
   > **NOTA:** Se pueden generar sitios estaticos si no se incluyen las carpetas stylus y views en el servidor de producción.
   
-  ## Instruccion para trabajar con stylus en snippets
+  ## Instruccion para trabajar con stylus en naranju2
 
-  Lo primero que tenes que saber es que esta herramienta tiene que ser útil para tu proyecto, tomar una estructura como **snippets** para empezar no debe condicionarte, adaptala a tu necesidad.
+  Lo primero que tenes que saber es que esta herramienta tiene que ser útil para tu proyecto, tomar una estructura como **naranju** para empezar no debe condicionarte, adaptala a tu necesidad.
 
-  Para empezar a utilizar **snippets** es necesario conocer la estructura de directorios. Si bien la podes cambiar a tu gusto para tu proyecto es necesario entenderla para modificarla.
+  Para empezar a utilizar **naranju** es necesario conocer la estructura de directorios. Si bien la podes cambiar a tu gusto para tu proyecto es necesario entenderla para modificarla.
 
-  Tené en cuenta que **snippets** usa una gran cantidad de recortes de código para facilitar la organización de tu proyecto. 
+  Tené en cuenta que **naranju** usa una gran cantidad de recortes de código para facilitar la organización de tu proyecto. 
 
   El objetivo de esto es facilitar la tarea de desarrollo y generar un único css compilado para tu sitio en producción.
 
@@ -98,25 +98,21 @@
   <div class="folder">
   - **models** (archivos de datos en formato json)
   - **views** (archivos jade)
-      - **_layouts** 
-        - **includes**
-        - **elements**
+    - **_layouts** 
+      - **includes**
+      - **elements**
   - **stylus** (aca se encuentran los archivos .styl, no es necesaria para producción)
-      - **lib**
+        - **assets**
           - **01core** (tipografias, reset, mixins y demás configuraciones generales)
-          - **02extends** (librerías stylus para facilitar la creación de código)
-          - **03elements** (definición de elementos puntuales de tu sitio)
-      - **themes**
-          - **default** (estilos por defecto para aplicar en línea)
-          - **docs** (estilos del sitio de documentación)
-          - **examples** (estilos de los ejemplos)
-  - **public**
+          - ...
+  - **dist**
+    - **assets**
       - **js** (tus scripts)
+        - **css**
           - **lib** (recursos javascript de terceros)
-      - **media** (archivos binarios)
-          - **fonts** (tipografias a utilizar)
-          - **img** (archivos de imagen que forman parte del diseño)
-          - **upload** (archivos que forman parte del contenido)
+        - **fonts** (tipografias a utilizar)
+        - **img** (archivos de imagen que forman parte del diseño)
+        - **upload** (archivos que forman parte del contenido)
   </div>
   #### Por donde empezar:
 
@@ -139,7 +135,7 @@
   Si todavía no conoces **stylus**, este es el momento de darte una vuelta por [stylus](http://styluscss.org/).
 
   Para empezar un proyecto nuevo, podés borrar todos estos estilos y comenzar utilizando *'clean.html'*. En este archivo solo están definidas las 
-  llamadas a los scripts necesarios para el desarrollo con **snippets**.
+  llamadas a los scripts necesarios para el desarrollo con **naranju**.
 
   #### Usando mixins:
 
@@ -178,7 +174,7 @@
   Con css3.styl haces compatible las propiedades de la nueva versión sin necesidad de escribir prefijos para todos los navegadores. 
   Mirá como usarlo en [stylus Prefixer](http://stylusprefixer.com/) 
 
-  Como sistema de grilla **snippets** adopta el método de 12 columnas. Conoce la implementación de [semantic.gs](http://semantic.gs/) que está 
+  Como sistema de grilla **naranju** adopta el método de 12 columnas. Conoce la implementación de [semantic.gs](http://semantic.gs/) que está 
   muy bien explicado y documentado.
 
   [Font Awesome](http://fortawesome.github.io/Font-Awesome/) es una familia de iconos estándar para graficar botones, links, alertas, etc.

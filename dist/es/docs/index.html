@@ -101,7 +101,7 @@
       </nav>
     </header>
     <div class="nav-docs">
-      <h2>Snippets</h2>
+      <h2>Naranju</h2>
       <h4>html base</h4>
       <ul class="nav-activo">
         <li><a href="#titulos">titulos</a>
@@ -907,10 +907,10 @@ devolviera una hoja de estilos única.</p>
 <blockquote>
 <p><strong>NOTA:</strong> Se pueden generar sitios estaticos si no se incluyen las carpetas stylus y views en el servidor de producción.</p>
 </blockquote>
-<h2 id="instruccion-para-trabajar-con-stylus-en-snippets">Instruccion para trabajar con stylus en snippets</h2>
-<p>Lo primero que tenes que saber es que esta herramienta tiene que ser útil para tu proyecto, tomar una estructura como <strong>snippets</strong> para empezar no debe condicionarte, adaptala a tu necesidad.</p>
-<p>Para empezar a utilizar <strong>snippets</strong> es necesario conocer la estructura de directorios. Si bien la podes cambiar a tu gusto para tu proyecto es necesario entenderla para modificarla.</p>
-<p>Tené en cuenta que <strong>snippets</strong> usa una gran cantidad de recortes de código para facilitar la organización de tu proyecto. </p>
+<h2 id="instruccion-para-trabajar-con-stylus-en-naranju2">Instruccion para trabajar con stylus en naranju2</h2>
+<p>Lo primero que tenes que saber es que esta herramienta tiene que ser útil para tu proyecto, tomar una estructura como <strong>naranju</strong> para empezar no debe condicionarte, adaptala a tu necesidad.</p>
+<p>Para empezar a utilizar <strong>naranju</strong> es necesario conocer la estructura de directorios. Si bien la podes cambiar a tu gusto para tu proyecto es necesario entenderla para modificarla.</p>
+<p>Tené en cuenta que <strong>naranju</strong> usa una gran cantidad de recortes de código para facilitar la organización de tu proyecto. </p>
 <p>El objetivo de esto es facilitar la tarea de desarrollo y generar un único css compilado para tu sitio en producción.</p>
 <h4 id="estructura-de-directorios-">Estructura de directorios:</h4>
 <p><div class="folder"></p>
@@ -924,31 +924,23 @@ devolviera una hoja de estilos única.</p>
 </li>
 </ul>
 </li>
-<li><strong>stylus</strong> (aca se encuentran los archivos .styl, no es necesaria para producción)<ul>
-<li><strong>lib</strong><ul>
-<li><strong>01core</strong> (tipografias, reset, mixins y demás configuraciones generales)</li>
-<li><strong>02extends</strong> (librerías stylus para facilitar la creación de código)</li>
-<li><strong>03elements</strong> (definición de elementos puntuales de tu sitio)</li>
-</ul>
+<li><strong>stylus</strong> (aca se encuentran los archivos .styl, no es necesaria para producción)<pre><code>- **assets**
+  - **01core** (tipografias, reset, mixins y demás configuraciones generales)
+  - ...</code></pre>
 </li>
-<li><strong>themes</strong><ul>
-<li><strong>default</strong> (estilos por defecto para aplicar en línea)</li>
-<li><strong>docs</strong> (estilos del sitio de documentación)</li>
-<li><strong>examples</strong> (estilos de los ejemplos)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>public</strong><ul>
+<li><strong>dist</strong><ul>
+<li><strong>assets</strong><ul>
 <li><strong>js</strong> (tus scripts)<ul>
+<li><strong>css</strong><ul>
 <li><strong>lib</strong> (recursos javascript de terceros)</li>
 </ul>
 </li>
-<li><strong>media</strong> (archivos binarios)<ul>
 <li><strong>fonts</strong> (tipografias a utilizar)</li>
 <li><strong>img</strong> (archivos de imagen que forman parte del diseño)</li>
 <li><strong>upload</strong> (archivos que forman parte del contenido)
 </div><h4 id="por-donde-empezar-">Por donde empezar:</h4>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -967,7 +959,7 @@ según las necesidades.</p>
 <p>En él nos vamos a encontrar con algunas líneas que le dan forma al html de ejemplo que es <em>&#39;index.html&#39;</em></p>
 <p>Si todavía no conoces <strong>stylus</strong>, este es el momento de darte una vuelta por <a href="http://styluscss.org/">stylus</a>.</p>
 <p>Para empezar un proyecto nuevo, podés borrar todos estos estilos y comenzar utilizando <em>&#39;clean.html&#39;</em>. En este archivo solo están definidas las 
-llamadas a los scripts necesarios para el desarrollo con <strong>snippets</strong>.</p>
+llamadas a los scripts necesarios para el desarrollo con <strong>naranju</strong>.</p>
 <h4 id="usando-mixins-">Usando mixins:</h4>
 <p>Una de las grandes ventajas de crear css con stylus, es la posibilidad de usar <em>mixins</em>. Esto nos permite definir una serie de atributos para un elemento, 
 incluso se le pueden pasar variables.</p>
@@ -992,7 +984,7 @@ incluso se le pueden pasar variables.</p>
 modificalo y sualo a tu gusto.</p>
 <p>Con css3.styl haces compatible las propiedades de la nueva versión sin necesidad de escribir prefijos para todos los navegadores. 
 Mirá como usarlo en <a href="http://stylusprefixer.com/">stylus Prefixer</a> </p>
-<p>Como sistema de grilla <strong>snippets</strong> adopta el método de 12 columnas. Conoce la implementación de <a href="http://semantic.gs/">semantic.gs</a> que está 
+<p>Como sistema de grilla <strong>naranju</strong> adopta el método de 12 columnas. Conoce la implementación de <a href="http://semantic.gs/">semantic.gs</a> que está 
 muy bien explicado y documentado.</p>
 <p><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> es una familia de iconos estándar para graficar botones, links, alertas, etc.</p>
 <h4 id="elementos-layouts-y-themes">Elementos, layouts y themes</h4>

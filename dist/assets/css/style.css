@@ -887,6 +887,27 @@ table tr {
 table tr:nth-child(odd) {
   background: #fbfbfb;
 }
+button {
+  display: inline-block;
+  padding: 6px 12px;
+  line-height: 1.3125rem;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #7f2300;
+}
+button:hover {
+  color: #fff;
+  background: #5f1a00;
+  text-decoration: none;
+}
+button:active {
+  background: #722000;
+  text-decoration: none;
+}
 form.hform p label {
   float: left;
   width: 25%;
@@ -3292,6 +3313,34 @@ footer {
     margin: 0 2em 0 20em;
   }
 }
+[href*="github"] {
+  margin-left: 10px;
+}
+[href*="github"]:before {
+  content: "\f113";
+  color: inherit;
+  font-size: inherit;
+  font-family: icomoon;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.5em;
+}
+[href*="linkedin"] {
+  margin-left: 10px;
+}
+[href*="linkedin"]:before {
+  content: "\f08c";
+  color: inherit;
+  font-size: inherit;
+  font-family: icomoon;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.5em;
+}
 header nav ul {
   list-style: none;
   margin: 0;
@@ -3467,6 +3516,7 @@ section#home p {
   position: relative;
   left: 2%;
   width: 80%;
+  color: #7f655a;
 }
 section#home h1 {
   -webkit-transition: all 200ms ease-in-out;
@@ -3513,34 +3563,7 @@ section#home:hover p {
   filter: none;
   left: 6%;
 }
-article section#home {
-  left: 0;
-  right: 0;
-  background: #fff;
-}
-article footer [href*="github"]:before {
-  content: "\f113";
-  color: inherit;
-  font-size: inherit;
-  font-family: icomoon;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  margin-right: 0.5em;
-}
-article footer [href*="linkedin"]:before {
-  content: "\f08c";
-  color: inherit;
-  font-size: inherit;
-  font-family: icomoon;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  margin-right: 0.5em;
-}
-article .ico-doc:before {
+section#home .ico-doc:before {
   content: "\f0f6";
   color: inherit;
   font-size: inherit;
@@ -3551,7 +3574,7 @@ article .ico-doc:before {
   -webkit-font-smoothing: antialiased;
   margin-right: 0.5em;
 }
-article .ico-url:before {
+section#home .ico-url:before {
   content: "\f0ac";
   color: inherit;
   font-size: inherit;
