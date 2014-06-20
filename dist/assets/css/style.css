@@ -3313,10 +3313,10 @@ footer {
     margin: 0 2em 0 20em;
   }
 }
-[href*="github"] {
+footer [href*="github"] {
   margin-left: 10px;
 }
-[href*="github"]:before {
+footer [href*="github"]:before {
   content: "\f113";
   color: inherit;
   font-size: inherit;
@@ -3327,10 +3327,10 @@ footer {
   -webkit-font-smoothing: antialiased;
   margin-right: 0.5em;
 }
-[href*="linkedin"] {
+footer [href*="linkedin"] {
   margin-left: 10px;
 }
-[href*="linkedin"]:before {
+footer [href*="linkedin"]:before {
   content: "\f08c";
   color: inherit;
   font-size: inherit;

@@ -72,7 +72,7 @@ module.exports = function(grunt) {
       }
     },
     views: {
-      files: ['app/**/*.jade', 'app/**/*.json'],
+      files: ['app/views/*.jade', 'app/views/**/*.jade', 'app/model/**/*.json', 'app/model/*.json'],
       tasks: ['jade'],
       options: {
         debounceDelay: 250
