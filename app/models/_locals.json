@@ -1,4 +1,4 @@
-{
+{ 
   "nav": [ 
     {"link":"/", "name":"Home"},
     {"link":"/docs/", "name":"Documentation"},
@@ -43,7 +43,8 @@
   },
   "page": {
     "title": "naranju",
-    "decription": "framework frontend: nodejs + jade + stylus"
+    "decription": "framework frontend: nodejs + jade + stylus",
+    "developer": "Jonathan Katz"
   },
   "es": {
     "nav": [ 

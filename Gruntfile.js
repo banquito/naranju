@@ -48,9 +48,10 @@ module.exports = function(grunt) {
           if(grunt.file.exists(src)) {
             console.log(src);
             var data = grunt.file.readJSON(src);
-            return { config: config, content: data } 
+            data.config = config;
+            return data; 
           }
-          return { config: config } 
+          return { config: config };
         }
       },
       files: [ {
