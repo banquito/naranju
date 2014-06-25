@@ -4,11 +4,11 @@ block nav
   .nav-docs
     h2 Naranju
     h4 html base
-    +nav('nav-activo', config.htmlbase)
+    +nav('nav-activo', global.htmlbase)
     h4 elementos
-    +nav('nav-activo', config.elementos)
+    +nav('nav-activo', global.elementos)
     h4 documetos
-    +nav('nav-activo', config.documentos)
+    +nav('nav-activo', global.documentos)
 
   script.
     $('header [href*="docs"]').addClass('active');

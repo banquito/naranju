@@ -3102,6 +3102,23 @@ form.vform p.checkbox label {
   white-space: nowrap;
   overflow: hidden;
 }
+header {
+  position: relative;
+  top: 0;
+  right: 2em;
+  z-index: 20;
+  float: right;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  overflow: hidden;
+  width: 4em;
+}
+header:hover {
+  width: 18em;
+}
 header nav ul {
   list-style: none;
   margin: 0;

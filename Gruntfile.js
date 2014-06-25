@@ -43,15 +43,15 @@ module.exports = function(grunt) {
           var src = String(src)
             .replace("app/views", "app/models")
             .replace(".jade", ".json");
-          var config = grunt.file.readJSON("app/models/_locals.json")
+          var global = grunt.file.readJSON("app/models/_global.json")
 
           if(grunt.file.exists(src)) {
             console.log(src);
             var data = grunt.file.readJSON(src);
-            data.config = config;
+            data.global = global;
             return data; 
           }
-          return { config: config };
+          return { global: global };
         }
       },
       files: [ {

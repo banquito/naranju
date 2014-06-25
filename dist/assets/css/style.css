@@ -3102,211 +3102,13 @@ form.vform p.checkbox label {
   white-space: nowrap;
   overflow: hidden;
 }
-body.docs {
-  background: #bf3500;
-}
-body.docs header {
-  right: auto;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  float: none;
-  position: fixed;
-  background: #fff;
-}
-body.docs p,
-body.docs ul {
-  color: #fff;
-}
-body.docs pre {
-  background: #df3e00;
-  border-left-color: #401200;
-  color: #401200;
-}
-body.docs a {
-  color: #7f2300;
-}
-body.docs .folder ul {
-  margin: 0.3em 0 0;
-  padding-left: 1.3em;
-}
-body.docs .folder ul li {
-  list-style: none;
-  margin-bottom: 0.3em;
-}
-body.docs .folder ul li:before {
-  content: "\f07c";
-  color: inherit;
-  font-size: inherit;
-  font-family: icomoon;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  margin-right: 0.5em;
-}
-body.docs .folder ul li:before {
-  top: 8px;
-  left: 0px;
-}
-header {
-  position: relative;
-  top: 0;
-  right: 2em;
-  z-index: 20;
-  float: right;
-  -webkit-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -ms-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-  overflow: hidden;
-  width: 4em;
-}
-header:hover {
-  width: 18em;
-}
-section {
-  margin: 0 20em;
-  color: #fff;
-  max-width: 600px;
-  min-width: 425px;
-}
-section h1,
-section h2,
-section h3,
-section h4,
-section h5,
-section h6,
-section p,
-section ul,
-section ol,
-section dl {
-  color: #fff;
-}
-section blockquote {
-  border-left: 5px solid #ac3000;
-  margin-left: 0;
-  padding-left: 3em;
-}
-section #slider,
-section #scrollable {
-  margin: 0;
-}
-section .docs-tabs {
-  border-bottom-color: #7f2300;
-  font-size: 1.5rem;
-  background: none;
-}
-section .docs-tabs li a {
-  background: none;
-  color: #401200;
-  padding: 0.6em 0.6em;
-  margin: 0 1.2em;
-  font-size: 1.5rem;
-}
-section .docs-tabs li a:hover,
-section .docs-tabs li a:focus {
-  background: none;
-  color: #7f2300;
-  text-decoration: none;
-}
-section .docs-tabs li a.current,
-section .docs-tabs li a.current:hover {
-  border: none;
-  border-bottom: 3px solid #7f2300;
-  color: #7f2300;
-  background: none;
-}
-section .pane {
-  padding: 1em 0.5em;
-  background: #b93300;
-}
-section .pane.code {
-  font-family: monospace, serif;
-}
-section .pane.code pre {
-  background: none;
-  border-left: none;
-  margin: 0;
-}
-section a.btn {
-  display: inline-block;
-  padding: 6px 12px;
-  line-height: 1.3125rem;
-  -webkit-font-smoothing: antialiased;
-  border: none;
-  cursor: pointer;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  color: #e54000;
-  background-color: #401200;
-}
-section a.btn:hover {
-  color: #e54000;
-  background: #300e00;
-  text-decoration: none;
-}
-section a.btn:active {
-  background: #3a1000;
-  text-decoration: none;
-}
-section a.btn:before {
-  content: "\f01a";
-  color: inherit;
-  font-size: inherit;
-  font-family: icomoon;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  margin-right: 0.5em;
-}
-section a.btn-git {
-  display: inline-block;
-  padding: 6px 12px;
-  line-height: 1.3125rem;
-  -webkit-font-smoothing: antialiased;
-  border: none;
-  cursor: pointer;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  color: #e54000;
-  background-color: #401200;
-}
-section a.btn-git:hover {
-  color: #e54000;
-  background: #300e00;
-  text-decoration: none;
-}
-section a.btn-git:active {
-  background: #3a1000;
-  text-decoration: none;
-}
-section a.btn-git:before {
-  content: "\f113";
-  color: inherit;
-  font-size: inherit;
-  font-family: icomoon;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  margin-right: 0.5em;
-}
-@media screen and (max-width: 1024px) {
-  section {
-    margin: 0 2em 0 20em;
-  }
-}
 footer {
   margin: 2em 20em;
   text-align: right;
   clear: both;
   max-width: 600px;
   min-width: 425px;
-  amargin-left: 1em;
+  margin-left: 1em;
 }
 @media screen and (max-width: 1024px) {
   footer {
@@ -3340,6 +3142,23 @@ footer [href*="linkedin"]:before {
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   margin-right: 0.5em;
+}
+header {
+  position: relative;
+  top: 0;
+  right: 2em;
+  z-index: 20;
+  float: right;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  overflow: hidden;
+  width: 4em;
+}
+header:hover {
+  width: 18em;
 }
 header nav ul {
   list-style: none;
@@ -3584,6 +3403,187 @@ section#home .ico-url:before {
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   margin-right: 0.5em;
+}
+body.docs {
+  background: #bf3500;
+}
+body.docs header {
+  right: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  float: none;
+  position: fixed;
+  background: #fff;
+}
+body.docs p,
+body.docs ul {
+  color: #fff;
+}
+body.docs pre {
+  background: #df3e00;
+  border-left-color: #401200;
+  color: #401200;
+}
+body.docs a {
+  color: #7f2300;
+}
+body.docs .folder ul {
+  margin: 0.3em 0 0;
+  padding-left: 1.3em;
+}
+body.docs .folder ul li {
+  list-style: none;
+  margin-bottom: 0.3em;
+}
+body.docs .folder ul li:before {
+  content: "\f07c";
+  color: inherit;
+  font-size: inherit;
+  font-family: icomoon;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.5em;
+}
+body.docs .folder ul li:before {
+  top: 8px;
+  left: 0px;
+}
+body.docs section {
+  margin: 0 20em;
+  color: #fff;
+  max-width: 600px;
+  min-width: 425px;
+}
+body.docs section h1,
+body.docs section h2,
+body.docs section h3,
+body.docs section h4,
+body.docs section h5,
+body.docs section h6,
+body.docs section p,
+body.docs section ul,
+body.docs section ol,
+body.docs section dl {
+  color: #fff;
+}
+body.docs section blockquote {
+  border-left: 5px solid #ac3000;
+  margin-left: 0;
+  padding-left: 3em;
+}
+body.docs section #slider,
+body.docs section #scrollable {
+  margin: 0;
+}
+body.docs section .docs-tabs {
+  border-bottom-color: #7f2300;
+  font-size: 1.5rem;
+  background: none;
+}
+body.docs section .docs-tabs li a {
+  background: none;
+  color: #401200;
+  padding: 0.6em 0.6em;
+  margin: 0 1.2em;
+  font-size: 1.5rem;
+}
+body.docs section .docs-tabs li a:hover,
+body.docs section .docs-tabs li a:focus {
+  background: none;
+  color: #7f2300;
+  text-decoration: none;
+}
+body.docs section .docs-tabs li a.current,
+body.docs section .docs-tabs li a.current:hover {
+  border: none;
+  border-bottom: 3px solid #7f2300;
+  color: #7f2300;
+  background: none;
+}
+body.docs section .pane {
+  padding: 1em 0.5em;
+  background: #b93300;
+}
+body.docs section .pane.code {
+  font-family: monospace, serif;
+}
+body.docs section .pane.code pre {
+  background: none;
+  border-left: none;
+  margin: 0;
+}
+body.docs section a.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  line-height: 1.3125rem;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #e54000;
+  background-color: #401200;
+}
+body.docs section a.btn:hover {
+  color: #e54000;
+  background: #300e00;
+  text-decoration: none;
+}
+body.docs section a.btn:active {
+  background: #3a1000;
+  text-decoration: none;
+}
+body.docs section a.btn:before {
+  content: "\f01a";
+  color: inherit;
+  font-size: inherit;
+  font-family: icomoon;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.5em;
+}
+body.docs section a.btn-git {
+  display: inline-block;
+  padding: 6px 12px;
+  line-height: 1.3125rem;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #e54000;
+  background-color: #401200;
+}
+body.docs section a.btn-git:hover {
+  color: #e54000;
+  background: #300e00;
+  text-decoration: none;
+}
+body.docs section a.btn-git:active {
+  background: #3a1000;
+  text-decoration: none;
+}
+body.docs section a.btn-git:before {
+  content: "\f113";
+  color: inherit;
+  font-size: inherit;
+  font-family: icomoon;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.5em;
+}
+@media screen and (max-width: 1024px) {
+  body.docs section {
+    margin: 0 2em 0 20em;
+  }
 }
 @media print {
   * {

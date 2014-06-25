@@ -1,9 +1,9 @@
 extends ../_layouts/default
 block nav
   header#header
-    h1.logo= config.page.title
-  +nav('nav', config.nav)
-  +nav('nav-light', config.navejemplos)
+    h1.logo= global.page.title
+  +nav('nav', global.nav)
+  +nav('nav-light', global.navejemplos)
 block content
   .wrapper
     section.span4

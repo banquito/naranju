@@ -11,16 +11,16 @@ html(lang="en")
       a(href="#sidemenuclose")
       nav
         aside.user-box
-          - if(config.user !== 'null')
+          - if(global.user !== 'null')
             figure
-              - if(config.user.image)
-                img(src=config.user.image)
-            h4= config.user.name
-            p= config.user.provider + ' | '
+              - if(global.user.image)
+                img(src=global.user.image)
+            h4= global.user.name
+            p= global.user.provider + ' | '
               a(href="#") Signout
         +search_form('#', 'Buscar')
 
-        +nav('', config.nav)
+        +nav('', global.nav)
     #page
       .wrapper
         block nav
