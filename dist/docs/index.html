@@ -134,13 +134,11 @@
         </li>
         <li><a href="#javascript-resources">javascript resources</a>
         </li>
-        <li><a href="#less-resources">less resources</a>
+        <li><a href="#stylus-resources">stylus resources</a>
         </li>
         <li><a href="#installation">installation</a>
         </li>
-        <li><a href="#how-does-it-work-">how does it work?</a>
-        </li>
-        <li><a href="#how-to-work-with-less-in-snippets">how to work with less</a>
+        <li><a href="#how-to-work-with-stylus-in-naranju">how to work with stylus</a>
         </li>
         <li><a href="#jade">jade</a>
         </li>
@@ -849,6 +847,8 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li><a href="http://flexslider.woothemes.com/">flexSlider2</a></li>
 <li><a href="http://code.google.com/p/html5shim/">html5shim</a></li>
 <li><a href="http://learnboost.github.io/stylus/">stylus</a></li>
+<li><a href="http://jeet.gs/">jeet</a></li>
+<li><a href="http://visionmedia.github.io/nib/">nib</a></li>
 <li><a href="http://jade-lang.com">jade</a></li>
 </ul>
 <h2 id="stylus-resources">Stylus Resources</h2>
@@ -862,50 +862,30 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li><a href="http://git.io/normalize">Normalize</a>.</li>
 <li>Letter Case included through Google fonts.</li>
 <li>Horizontal o Vertical form definition.</li>
-<li>Pack to generate Recurrent Codes. This is like executing functions in CSS.<ul>
-<li><a href="http://semantic.gs/">semantic.gs</a> grid.</li>
-<li>Buttons.</li>
-<li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons.</li>
-</ul>
-</li>
+<li>Pack to generate Recurrent Codes. This is like executing functions in CSS.</li>
 <li>Pre defined Elements.<ul>
 <li>Gallery.</li>
 <li>Navigation.</li>
 <li>Image Rotator.</li>
 </ul>
 </li>
-<li>Layout<ul>
-<li>General styles with individual files for each media Query.</li>
-</ul>
-</li>
 </ul>
 <h2 id="installation">Installation</h2>
 <p><strong>Attention: To be able to use this server, you need to have <a href="http://nodejs.org">nodejs</a> installed.</strong></p>
 <h5 id="dashboard-">Dashboard:</h5>
-<pre><code>git clone https://github.com/tiko2015/naranju2.git
-cd naranju2
+<pre><code>git clone https://github.com/banquito/naranju.git
+cd naranju
 npm install
 grunt build
 grunt server watch</code></pre>
 <h5 id="navigator-">Navigator:</h5>
 <pre><code>http://localhost:3000</code></pre>
 <p>Run this application on heroku.com:</p>
-<pre><code>heroku apps:create example
+<pre><code>heroku apps:create [example]
 git push heroku master
 heroku open</code></pre>
 <p>See it working on <a href="http://naranju.herokuapp.com">heroku</a></p>
 <p>If you need help, <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">click on this link</a></p>
-<h2 id="how-does-it-work-">How does it work?</h2>
-<p>Being this a program to create templates, when the node server is started, it sits and waits for file requests located at the public directory.</p>
-<p>If the requested files have the .html extension, the Server searches its correlation in the views folder, in this specific case with the .html.jade extension.</p>
-<p>If this one already exists, it looks for the same files in the models folder using the extension .html.json, it will compile and return the requested html.</p>
-<p>At the same time, it creates the requested file in Public folder.</p>
-<p>If the file would not exist, the server would try to find it in the Public folder, and if still not there, it will then show a 404 error. </p>
-<p>If using stylus, you do the same procedure.</p>
-<p>Meaning that the call to style.css would compile stylus/style.css.styl with all its includes and it will return a page of unique styles.</p>
-<blockquote>
-<p><strong>NOTE:</strong> Idle sites could be generated if stylus &amp; views folders are not included in the production Server.</p>
-</blockquote>
 <h2 id="how-to-work-with-stylus-in-naranju">How to work with stylus in Naranju</h2>
 <p>Please know that this tool should be helpful in implementing your project.</p>
 <p>Therefore, using a structure like Shippets should not intimidate you. You should be able to adapt and customize this tool it to your needs.</p>
@@ -959,49 +939,10 @@ heroku open</code></pre>
 </ul>
 </li>
 </ul>
-<p>Start by opening the <em>&#39;stylus/style.styl&#39;</em> file.</p>
+<p>Start by opening the <em>&#39;app/assets/stylus/style.styl&#39;</em> file.</p>
 <p>Here you will find all the files needed for your task, and in their loading sequence.</p>
 <p>For reading purposes, all directories are numbered. Neverthestylus, each task has different requirements, qnd this sequence can be altered based on your needs. </p>
-<p>To remove files, you don’t need to erase them. You can comment them same as in <em>&#39;reset.styl&#39;</em>:</p>
-<pre><code>...
-//@import &quot;01core/reset.styl&quot;;
-@import &quot;01core/normalize.styl&quot;;
-...</code></pre>
-<p>Another file where we are committed to working extensively is <em>04layout/all.styl</em>.</p>
-<p>Here you will find lines that shape the HTML. i.e, <em>&#39;index.html&#39;</em></p>
 <p>If you are not familiar with <strong>stylus</strong> yet, this is a good time to <a href="http://styluscss.org/">take a tour</a>.</p>
-<p>When beginning a new project or task, you can delete all styles and start utilizing <em>&#39;clean.html&#39;</em>. 
-The only definitions in this file are the calls are the calls to the scripts needed for <strong>naranju2</strong> development.</p>
-<h4 id="mixins-user-">Mixins User:</h4>
-<p>One of the biggest advantages of creating CSS with stylus is the possibility of using mixins.</p>
-<p>This allows us to define a series of attributes for one element.  Further, you can add variables.</p>
-<p>Let’s check an example of our file <em>&#39;lib/01core/mixins.styl&#39;</em></p>
-<pre><code>.size (@width: 400, @height: 200) {
-  width: @width * 1px;
-  height: @height * 1px;
-}</code></pre>
-<p>CUsing these lines we can generate an abreviated code to define elements of a fixed size. To do a div with a <strong>class .box</strong>, we could write it like this:</p>
-<pre><code>.box {
-  .size(60,60);
-}</code></pre>
-<p>And the result of the compiled CSS would be as follows:</p>
-<pre><code>.box {
-  width: 60px;
-  height: 60px;
-}</code></pre>
-<h4 id="using-extends-">Using Extends:</h4>
-<p>Up to know, we have four (4) defined extensions, buttons, css3, grid and Font-Awesome.</p>
-<p>Buttons is an extension that allows you to create botonos for links and inputs for forms.</p>
-<p>It also allows you define the background color and size.</p>
-<p>Check it out, modify it and use it as you please!</p>
-<p>With css3.styl you can make the properties  of the new version compatible so that you don’t have to write prefixes for every navigator.</p>
-<p>See how to use it in <a href="http://stylusprefixer.com/">stylus Prefixer</a> </p>
-<p>As a table system, <strong>naranju</strong> adopts the 12 column method. Learn how to use <a href="http://semantic.gs/">semantic.gs</a> which is very well explained and documented.</p>
-<p><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> is a family of standard icons to help you graph buttons, links, alerts, etc.</p>
-<h4 id="elements-layouts-and-sources">Elements, layouts and sources</h4>
-<p>In elements you will find structures that are ordinarily used. Check the directory views/_layouts/elements you will find other code shorcuts that are compatible.</p>
-<p>In layouts we define the general rules to responsive. </p>
-<p>Themes is where you will find all the particular styles for your task.</p>
 <h4 id="reccommendations">Reccommendations</h4>
 <p>Use stylus from a local Server. Installing it in any operating system is a simple task.</p>
 <h2 id="jade">Jade</h2>

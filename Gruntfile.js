@@ -18,11 +18,12 @@ module.exports = function(grunt) {
         paths: ['stylus'],
         urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
         use: [
-          require('nib')
+          require('nib'),
+          require('jeet')
         ]
       },
       import: [
-        'nib'
+        'nib','jeet'
       ],
       files: [ {
         cwd: "app/assets/stylus",

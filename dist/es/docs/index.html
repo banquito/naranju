@@ -134,13 +134,11 @@
         </li>
         <li><a href="#recursos-javascript">recursos javascript</a>
         </li>
-        <li><a href="#recursos-less">recursos less</a>
+        <li><a href="#recursos-stylus">recursos stylus</a>
         </li>
         <li><a href="#instalaci-n">instalación</a>
         </li>
-        <li><a href="#como-funciona">como funciona</a>
-        </li>
-        <li><a href="#instruccion-para-trabajar-con-less-en-snippets">como usar less</a>
+        <li><a href="#instrucciones-para-trabajar-con-stylus-en-naranju">instrucciones</a>
         </li>
         <li><a href="#jade">como usar jade</a>
         </li>
@@ -839,9 +837,8 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li>Construido en Stylus para desarrollar en Stylus.</li>
 <li>Ordenado y extensible.</li>
 <li>Sin código basura.</li>
-<li>Fácil de aprender</li>
+<li>Fácil de aprender.</li>
 <li>Incluye librerías js para formularios, modales, slider, tooltips tabs y más.</li>
-<li>El css base compilado pesa solo 7.4k.</li>
 </ul>
 <h2 id="recursos-javascript">Recursos javascript</h2>
 <ul>
@@ -850,6 +847,8 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li><a href="http://flexslider.woothemes.com/">flexSlider2</a></li>
 <li><a href="http://code.google.com/p/html5shim/">html5shim</a></li>
 <li><a href="http://learnboost.github.io/stylus/">stylus</a></li>
+<li><a href="http://jeet.gs/">jeet</a></li>
+<li><a href="http://visionmedia.github.io/nib/">nib</a></li>
 <li><a href="http://jade-lang.com">jade</a></li>
 </ul>
 <h2 id="recursos-stylus">Recursos Stylus</h2>
@@ -863,51 +862,31 @@ form.vform  { .mixFormVertical(); }</code></pre>
 <li><a href="http://git.io/normalize">Normalize</a>.</li>
 <li>Tipografias incluidas y mediante google fonts</li>
 <li>Definición de formularios horizontales o verticales.</li>
-<li>Conjuntos de atributos para generar código recurrente. Algo asi como ejecutar funciones dentro del css.<ul>
-<li>Grilla y columnas de <a href="http://semantic.gs/">semantic.gs</a>.</li>
-<li>Botones.</li>
-<li>Iconos de <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>.</li>
-</ul>
-</li>
+<li>Conjuntos de atributos para generar código recurrente. Algo asi como ejecutar funciones dentro del css.</li>
 <li>Elementos predefinidos.<ul>
 <li>Galería.</li>
 <li>Navegación.</li>
 <li>Rotador de imágenes.</li>
 </ul>
 </li>
-<li>Layout<ul>
-<li>Estilos generales y archivos separados para cada media query.</li>
-</ul>
-</li>
 </ul>
 <h2 id="instalaci-n">Instalación</h2>
 <p><strong>Atención: Para poder usar el servidor, debes tener instalado <a href="http://nodejs.org">nodejs</a>.</strong></p>
 <h5 id="en-consola-">En consola:</h5>
-<pre><code>git clone https://github.com/tiko2015/naranju2.git
-cd naranju2
+<pre><code>git clone https://github.com/banquito/naranju.git
+cd naranju
 npm install
 grunt build
 grunt server watch</code></pre>
 <h5 id="navegar-">Navegar:</h5>
 <pre><code>http://localhost:3000</code></pre>
 <p>Correr la aplicacion en heroku.com:</p>
-<pre><code>heroku apps:create example
+<pre><code>heroku apps:create [example]
 git push heroku master
 heroku open</code></pre>
 <p>Miralo funcionando en <a href="http://naranju.herokuapp.com">heroku</a></p>
 <p>Si necesitas ayuda con esto, <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">acá está la documentación de heroku</a></p>
-<h2 id="como-funciona">Como funciona</h2>
-<p>Al ser un desarrollo orientado a crear plantillas, el servidor node que se inicia se queda a la espera de la petición de archivos situados en el directorio public.</p>
-<p>Si los archivos solicitados tienen la extensión .html, busca su correlación en la carpeta views,en este caso con la extensión .html.jade. 
-En el caso de existir, busca el mismo archivo en models con la extensión .html.json, compila y devuelte el html solicitado.
-Al mismo tiempo crea el archivo solicitado en la carpeta public.</p>
-<p>Si no existiera, intenta encontrarlo en public y en caso de no exitir mostrará un error 404.</p>
-<p>En el caso de stylus, se repite la misma mecánica. O sea que el llamado a style.css generaría que se compile stylus/style.css.styl con todos sus include y 
-devolviera una hoja de estilos única.</p>
-<blockquote>
-<p><strong>NOTA:</strong> Se pueden generar sitios estaticos si no se incluyen las carpetas stylus y views en el servidor de producción.</p>
-</blockquote>
-<h2 id="instruccion-para-trabajar-con-stylus-en-naranju2">Instruccion para trabajar con stylus en naranju2</h2>
+<h2 id="instrucciones-para-trabajar-con-stylus-en-naranju">Instrucciones para trabajar con stylus en naranju</h2>
 <p>Lo primero que tenes que saber es que esta herramienta tiene que ser útil para tu proyecto, tomar una estructura como <strong>naranju</strong> para empezar no debe condicionarte, adaptala a tu necesidad.</p>
 <p>Para empezar a utilizar <strong>naranju</strong> es necesario conocer la estructura de directorios. Si bien la podes cambiar a tu gusto para tu proyecto es necesario entenderla para modificarla.</p>
 <p>Tené en cuenta que <strong>naranju</strong> usa una gran cantidad de recortes de código para facilitar la organización de tu proyecto. </p>
@@ -957,51 +936,10 @@ devolviera una hoja de estilos única.</p>
 </ul>
 </li>
 </ul>
-<p>Lo primero que podés hacer es abrir el archivo <em>&#39;stylus/style.styl&#39;</em>. Acá vás a encotrar todos los archivos incluidos en tu proyecto y el orden en que se cargan.</p>
+<p>Lo primero que podés hacer es abrir el archivo <em>&#39;app/assets/stylus/style.styl&#39;</em>. Acá vás a encotrar todos los archivos incluidos en tu proyecto y el orden en que se cargan.</p>
 <p>Fijate que los directorios esán numerados para facilitar la lectura, de todos modos, cada proyecto tiene sus requerimentos y este orden se puede alterar 
 según las necesidades.</p>
-<p>Para quitar archivos no es necesario borrarlos, se pueden comentar como el caso de <em>&#39;reset.styl&#39;</em>:</p>
-<pre><code>...
-//@import &quot;01core/reset.styl&quot;;
-@import &quot;01core/normalize.styl&quot;;
-...</code></pre>
-<p>Otro archivo donde nos proponemos trabajar bastante de nuestro tiempo es <em>04layout/all.styl</em>.</p>
-<p>En él nos vamos a encontrar con algunas líneas que le dan forma al html de ejemplo que es <em>&#39;index.html&#39;</em></p>
 <p>Si todavía no conoces <strong>stylus</strong>, este es el momento de darte una vuelta por <a href="http://styluscss.org/">stylus</a>.</p>
-<p>Para empezar un proyecto nuevo, podés borrar todos estos estilos y comenzar utilizando <em>&#39;clean.html&#39;</em>. En este archivo solo están definidas las 
-llamadas a los scripts necesarios para el desarrollo con <strong>naranju</strong>.</p>
-<h4 id="usando-mixins-">Usando mixins:</h4>
-<p>Una de las grandes ventajas de crear css con stylus, es la posibilidad de usar <em>mixins</em>. Esto nos permite definir una serie de atributos para un elemento, 
-incluso se le pueden pasar variables.</p>
-<p>Vamos a ver un ejemplo de nuestro archivo <em>&#39;01core/mixins.styl&#39;</em></p>
-<pre><code>.size (@width: 400, @height: 200) {
-  width: @width * 1px;
-  height: @height * 1px;
-}</code></pre>
-<p>Con estas líneas generamos un código abreviado para definir elementos de tamaño fijo. Para un <em>div</em> con el <em>class .box</em>, podriamos escribir esto:</p>
-<pre><code>.box {
-  .size(60,60);
-}</code></pre>
-<p>Y el resultado en el css compilado sería el siguiente:</p>
-<pre><code>.box {
-  width: 60px;
-  height: 60px;
-}</code></pre>
-<p><em>Investiga que otros elementos tenes en mixins y agrega los que creas necesarios</em>.</p>
-<h4 id="usando-extends-">Usando extends:</h4>
-<p>Hasta ahora tenemos 4 extensiones definidas: buttons, css3, grid y glyphicons.</p>
-<p>Buttons es una extensión que te permite crear botonos tanto de links como inputs de formularios. Te permite definir el color de fondo, tamaño. Miralo, 
-modificalo y sualo a tu gusto.</p>
-<p>Con css3.styl haces compatible las propiedades de la nueva versión sin necesidad de escribir prefijos para todos los navegadores. 
-Mirá como usarlo en <a href="http://stylusprefixer.com/">stylus Prefixer</a> </p>
-<p>Como sistema de grilla <strong>naranju</strong> adopta el método de 12 columnas. Conoce la implementación de <a href="http://semantic.gs/">semantic.gs</a> que está 
-muy bien explicado y documentado.</p>
-<p><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> es una familia de iconos estándar para graficar botones, links, alertas, etc.</p>
-<h4 id="elementos-layouts-y-themes">Elementos, layouts y themes</h4>
-<p>En elements vas a encontrar algunas estructuras que se utilizan comunmente, revisa en el directorio views/_layouts/elements 
-que encontraras otros recortes de código compatibles.</p>
-<p>En layouts se definen las reglas generales para responsive.</p>
-<p>Themes es donde se encuentran todos los estilos particulares de tu desarrollo.</p>
 <h4 id="recomendaciones">Recomendaciones</h4>
 <p>Utilizá stylus desde un servidor local, instalarlo en cualquier sistema operativo suele ser una tarea simple.</p>
 <h2 id="jade">Jade</h2>

@@ -30,10 +30,9 @@
   "documentos": [ 
     {"link":"#characteristics", "name":"characteristics"},
     {"link":"#javascript-resources", "name":"javascript resources"},
-    {"link":"#less-resources", "name":"less resources"},
+    {"link":"#stylus-resources", "name":"stylus resources"},
     {"link":"#installation", "name":"installation"},
-    {"link":"#how-does-it-work-", "name":"how does it work?"},
-    {"link":"#how-to-work-with-less-in-snippets", "name":"how to work with less"},
+    {"link":"#how-to-work-with-stylus-in-naranju", "name":"how to work with stylus"},
     {"link":"#jade", "name":"jade"}
   ],
   "user": {
@@ -71,10 +70,9 @@
     "documentos": [ 
       {"link":"#caracter-sticas", "name":"características"},
       {"link":"#recursos-javascript", "name":"recursos javascript"},
-      {"link":"#recursos-less", "name":"recursos less"},
+      {"link":"#recursos-stylus", "name":"recursos stylus"},
       {"link":"#instalaci-n", "name":"instalación"},
-      {"link":"#como-funciona", "name":"como funciona"},
-      {"link":"#instruccion-para-trabajar-con-less-en-snippets", "name":"como usar less"},
+      {"link":"#instrucciones-para-trabajar-con-stylus-en-naranju", "name":"instrucciones"},
       {"link":"#jade", "name":"como usar jade"}
     ],
     "page": {

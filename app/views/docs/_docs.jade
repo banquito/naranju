@@ -18,6 +18,8 @@
   - [flexSlider2](http://flexslider.woothemes.com/)
   - [html5shim](http://code.google.com/p/html5shim/)
   - [stylus](http://learnboost.github.io/stylus/)
+  - [jeet](http://jeet.gs/)
+  - [nib](http://visionmedia.github.io/nib/)
   - [jade](http://jade-lang.com)
 
   ## Stylus Resources
@@ -30,15 +32,10 @@
   - Letter Case included through Google fonts.
   - Horizontal o Vertical form definition.
   - Pack to generate Recurrent Codes. This is like executing functions in CSS.
-      - [semantic.gs](http://semantic.gs/) grid.
-      - Buttons.
-      - [Font Awesome](http://fortawesome.github.io/Font-Awesome/) icons.
   - Pre defined Elements.
       - Gallery.
       - Navigation.
       - Image Rotator.
-  - Layout
-      - General styles with individual files for each media Query.
 
   ## Installation
 
@@ -47,8 +44,8 @@
 
   ##### Dashboard:
 
-      git clone https://github.com/tiko2015/naranju2.git
-      cd naranju2
+      git clone https://github.com/banquito/naranju.git
+      cd naranju
       npm install
       grunt build
       grunt server watch
@@ -59,33 +56,13 @@
 
   Run this application on heroku.com:
 
-      heroku apps:create example
+      heroku apps:create [example]
       git push heroku master
       heroku open
 
   See it working on [heroku](http://naranju.herokuapp.com)
 
   If you need help, [click on this link](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-  
-  ## How does it work?
-
-  Being this a program to create templates, when the node server is started, it sits and waits for file requests located at the public directory.
-
-  If the requested files have the .html extension, the Server searches its correlation in the views folder, in this specific case with the .html.jade extension.
-  
-  If this one already exists, it looks for the same files in the models folder using the extension .html.json, it will compile and return the requested html.
-  
-  At the same time, it creates the requested file in Public folder.
-  
-  If the file would not exist, the server would try to find it in the Public folder, and if still not there, it will then show a 404 error. 
-  
-  If using stylus, you do the same procedure.
-  
-  Meaning that the call to style.css would compile stylus/style.css.styl with all its includes and it will return a page of unique styles.
-  
-  > **NOTE:** Idle sites could be generated if stylus & views folders are not included in the production Server.
-
-
   
   ## How to work with stylus in Naranju
 
@@ -133,82 +110,13 @@
   </div>
   #### Where to begin:
 
-  Start by opening the *'stylus/style.styl'* file.
+  Start by opening the *'app/assets/stylus/style.styl'* file.
 
   Here you will find all the files needed for your task, and in their loading sequence.
 
   For reading purposes, all directories are numbered. Neverthestylus, each task has different requirements, qnd this sequence can be altered based on your needs. 
 
-  To remove files, you don’t need to erase them. You can comment them same as in *'reset.styl'*:
-
-      ...
-      //@import "01core/reset.styl";
-      @import "01core/normalize.styl";
-      ...
-      
-  Another file where we are committed to working extensively is *04layout/all.styl*.
-
-  Here you will find lines that shape the HTML. i.e, *'index.html'*
-
   If you are not familiar with **stylus** yet, this is a good time to [take a tour](http://styluscss.org/).
-
-  When beginning a new project or task, you can delete all styles and start utilizing *'clean.html'*. 
-  The only definitions in this file are the calls are the calls to the scripts needed for **naranju2** development.
-
-
-  #### Mixins User:
-
-  One of the biggest advantages of creating CSS with stylus is the possibility of using mixins.
-
-  This allows us to define a series of attributes for one element.  Further, you can add variables.
-  
-  Let’s check an example of our file *'lib/01core/mixins.styl'*
-
-      .size (@width: 400, @height: 200) {
-        width: @width * 1px;
-        height: @height * 1px;
-      }
-      
-  CUsing these lines we can generate an abreviated code to define elements of a fixed size. To do a div with a **class .box**, we could write it like this:
-
-      .box {
-        .size(60,60);
-      }
-      
-  And the result of the compiled CSS would be as follows:
-
-      .box {
-        width: 60px;
-        height: 60px;
-      }
-
-
-  #### Using Extends:
-
-  Up to know, we have four (4) defined extensions, buttons, css3, grid and Font-Awesome.
-
-  Buttons is an extension that allows you to create botonos for links and inputs for forms.
-
-  It also allows you define the background color and size.
-  
-  Check it out, modify it and use it as you please!
-
-  With css3.styl you can make the properties  of the new version compatible so that you don’t have to write prefixes for every navigator.
-
-  See how to use it in [stylus Prefixer](http://stylusprefixer.com/) 
-
-  As a table system, **naranju** adopts the 12 column method. Learn how to use [semantic.gs](http://semantic.gs/) which is very well explained and documented.
-
-  [Font Awesome](http://fortawesome.github.io/Font-Awesome/) is a family of standard icons to help you graph buttons, links, alerts, etc.
-
-  #### Elements, layouts and sources
-
-  In elements you will find structures that are ordinarily used. Check the directory views/_layouts/elements you will find other code shorcuts that are compatible.
-
-  In layouts we define the general rules to responsive. 
-
-  Themes is where you will find all the particular styles for your task.
-
 
   #### Reccommendations
 
