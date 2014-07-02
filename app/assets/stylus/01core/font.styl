@@ -6,3 +6,10 @@ font-face($fontname, $fontpath)
   url($fontpath + 'svg' + '?#' + $fontname) format('svg');
   font-style: normal
   font-weight: normal
+
+font-size(size)
+  if unit(1.2em) == 'rem'
+    font-size unit(size, 'em')
+    font-size size
+  else
+    font-size size

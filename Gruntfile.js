@@ -14,7 +14,7 @@ module.exports = function(grunt) {
   stylus: {
     compile: {
       options: {
-        compress: false,
+        compress: true,
         paths: ['stylus'],
         urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
         use: [
@@ -92,20 +92,6 @@ module.exports = function(grunt) {
   clean: {
     dist: ["dist/assets/css/*.css", "dist/assets/js/*.js"]
   },
-
-  cssmin: {
-    bootstrap: {
-      files: {
-        "dist/assets/css/bootstrap.min.css": ["dist/assets/css/bootstrap.css"]
-      }
-    },
-    theme: {
-      files: {
-        "dist/assets/css/theme.min.css": ["dist/assets/css/theme.css"]
-      }
-    }
-  },
-
   uglify: {
     dist: {
       files: {
@@ -136,13 +122,10 @@ module.exports = function(grunt) {
   // Load plugins here
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks("grunt-contrib-jade");
 
-  grunt.registerTask('dist', ['jade','clean','stylus', 'uglify']);
-  grunt.registerTask('theme', ['stylus']);
   grunt.registerTask('build', ['jade','clean','stylus', 'uglify']);
   grunt.registerTask('server', 'Start a custom web server', function() {
       grunt.log.writeln('Started web server on port ' + grunt.config.get('server.port') );
