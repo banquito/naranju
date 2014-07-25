@@ -19,13 +19,14 @@ Naranju
 - [jQuery tools](http://jquerytools.org) (incluye: Tabs, Tooltip, Form Tools, Toolbox.)
 - [flexSlider2](http://flexslider.woothemes.com/)
 - [html5shim](http://code.google.com/p/html5shim/)
-- [stylus](http://learnboost.github.io/stylus/)
-- [jeet](http://jeet.gs/)
-- [nib](http://visionmedia.github.io/nib/)
 - [jade](http://jade-lang.com)
 
 ## Recursos Stylus
 
+- [stylus](http://learnboost.github.io/stylus/)
+- [jeet](http://jeet.gs/)
+- [nib](http://visionmedia.github.io/nib/)
+- [rupture](http://jenius.github.io/rupture/)
 - Variables de entorno
     - Colores 
     - Fuentes
@@ -77,33 +78,36 @@ Tené en cuenta que **naranju** usa una gran cantidad de recortes de código par
 El objetivo de esto es facilitar la tarea de desarrollo y generar un único css compilado para tu sitio en producción.
 
 #### Estructura de directorios:
-<div class="folder">
-  - **models** (archivos de datos en formato json)
-  - **views** (archivos jade)
-      - **_layouts** 
-        - **includes**
-        - **elements**
+
+- **models** (archivos de datos en formato json)
+
+- **views** (archivos jade)
+  - **_layouts** 
+    - **includes**
+    - **elements**
+
+- **assets**
+  - **js**
+  - **stylus** (aca se encuentran los archivos .styl, no es necesaria para producción)
+    - **01core** (tipografias, reset, mixins y demás configuraciones generales)
+    - **02elements**
+    - **03components**
+    - **04vendors**
+    - **05helpers**
+    - **06layouts**
+    - **07navigations**
+    - **08pages**
+    - **09media**
+
+- **dist**
   - **assets**
-      - **js**
-      - **stylus** (aca se encuentran los archivos .styl, no es necesaria para producción)
-        - **01core** (tipografias, reset, mixins y demás configuraciones generales)
-        - **02elements**
-        - **03components**
-        - **04vendors**
-        - **05helpers**
-        - **06layouts**
-        - **07navigations**
-        - **08pages**
-        - **09media**
-  - **dist**
-      - **assets**
-        - **js** (tus scripts)
-          - **lib** (recursos javascript de terceros)
-        - **css**
-        - **fonts** (tipografias a utilizar)
-        - **img** (archivos de imagen que forman parte del diseño)
-        - **upload** (archivos que forman parte del contenido)
-</div>
+    - **js** (tus scripts)
+      - **lib** (recursos javascript de terceros)
+    - **css**
+    - **fonts** (tipografias a utilizar)
+    - **img** (archivos de imagen que forman parte del diseño)
+    - **upload** (archivos que forman parte del contenido)
+
 #### Por donde empezar:
 
 Lo primero que podés hacer es abrir el archivo *'app/assets/stylus/style.styl'*. Acá vás a encotrar todos los archivos incluidos en tu proyecto y el orden en que se cargan.

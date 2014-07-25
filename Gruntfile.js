@@ -19,7 +19,8 @@ module.exports = function(grunt) {
         urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
         use: [
           require('nib'),
-          require('jeet')
+          require('jeet'),
+          require('rupture')
         ]
       },
       import: [
