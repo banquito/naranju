@@ -1,5 +1,4 @@
 /*
- * Grunt Script for Bootstrap Stylus
  * http://gruntjs.com/
  */
 
