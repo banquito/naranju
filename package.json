@@ -1,6 +1,6 @@
 {
   "name": "naranju",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "devDependencies": {
     "grunt": "~0.4.2",
     "stylus": "~0.42.0",
@@ -11,7 +11,7 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-uglify": "~0.3.2",
     "grunt-contrib-jade": "~0.12.0",
-    "rupture": "~0.2.0"
+    "rupture": "~0.4.0"
   },
   "dependencies": {
     "express": "~4.4.3"
