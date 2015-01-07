@@ -1,0 +1,17 @@
+mixin nav(style, items)
+  ul(class=style)
+    - each item in items
+      li
+        a(href=item.link)= item.name
+        - if(item.nav)
+          +nav('subnav', item.nav)
+
+mixin tabs(items)
+  +nav('tabs',items)
+  .panes
+    - each item in items
+      div!=item.content
+  script.
+    $(function() {
+      $("ul.tabs").tabs("div.panes > div");
+    });

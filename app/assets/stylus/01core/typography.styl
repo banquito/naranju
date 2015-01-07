@@ -1,0 +1,119 @@
+/* Typography */
+
+global-reset();
+
+html 
+  font-size 62.5%
+
+body { 
+  margin: 0;
+}
+/* Default fonts and colors. */
+
+body,p,ul,ol,dl,input,textarea
+  font-family: $textFont; 
+  font-size: 1.2rem; 
+  line-height:1.5em; 
+  color: $textColor; 
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 
+  font-weight: 300; 
+  line-height: 1.2em; 
+  margin-bottom:1em; 
+  color: $titleColor;
+
+h1
+  font-size: 3.6rem;
+h2
+  font-size: 3rem;
+h3
+  font-size: 2.4rem;
+h4
+  font-size: 1.8rem;
+h5
+  font-size: 1.3rem;
+h6
+  font-size: 1rem;
+
+/* Form elements
+-------------------------------------------------------------- */
+
+fieldset  
+  margin 0 0 15px 0
+  padding 0
+  border none 
+
+legend 
+  font-size 2rem
+  font-family $titleFont
+  line-height 3em
+
+
+
+p
+  margin: 0 0 1.2rem;
+
+ul, ol
+  margin: 0 0 1.2em 1.5em; 
+  padding:0;
+ul
+  list-style-type: disc;
+ol
+  list-style-type: decimal;
+
+dl
+  margin: 0 0 1.2em 0; 
+dl
+  dt
+    font-weight: bold; 
+  dd
+    margin-left: 1.2em;
+
+abbr
+  border-bottom: 1px dotted #000;
+address
+  margin-top: 1em; font-style: italic;
+del
+  color: #000;
+
+a 
+  color: $linkColor; 
+  text-decoration: none;
+a:hover 
+  text-decoration: underline; 
+  color:$linkColorOver;
+a:focus
+  outline: none;
+
+blockquote
+  margin: 1.2em;
+strong
+  font-weight: 600;
+em, dfn
+  font-style: italic;
+dfn
+  font-weight: bold;
+pre
+  background: #f1f1f1; 
+  padding: 1em; 
+  border-left: 0.3em solid #ddd;
+pre, code
+  margin: 1.2em 0; 
+  white-space: pre;
+pre, code, tt
+  font: 1em monospace; 
+  line-height: 1.8em;
+tt
+  display: block; 
+  margin: 1.5em 0; 
+  line-height: 1.8em;
+
+hr 
+  color: $lineColor; 
+  background-color: $lineColor; 
+  height: 1px; 
+  border: none; 
+  margin: 1em 0;

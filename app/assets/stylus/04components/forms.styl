@@ -1,0 +1,36 @@
+/* horizontal Form */
+
+horizontal_form() 
+  p  
+    label
+      float left
+      width 25%
+      margin-right 5%
+      text-align right
+    input[type="text"], 
+    input[type="number"], 
+    input[type="email"], 
+    input[type="password"], 
+    select
+      width 50%
+    textarea  
+      width 50%
+    &.checkbox
+      margin-left 30%
+      height auto
+      label
+        text-align left 
+        width auto
+        margin-right 1em
+        display inline
+        float none
+
+/* vertical Form */
+
+vertical_form()
+  p
+    label
+      display block
+    &.checkbox label
+      display inline
+
