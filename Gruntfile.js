@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                     'nib', 'jeet'
                 ],
                 files: [{
-                    cwd: "app/assets/stylus",
+                    cwd: "app/assets/css",
                     src: "*.styl",
                     dest: "dist/assets/css",
                     expand: true,
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 
         watch: {
             css: {
-                files: ['app/assets/stylus/*.styl', 'app/assets/stylus/**/*.styl'],
+                files: ['app/assets/css/*.styl', 'app/assets/css/**/*.styl'],
                 tasks: ['stylus'],
                 
             },
