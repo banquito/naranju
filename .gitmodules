@@ -1,0 +1,3 @@
+[submodule "app/assets/css/naranju-mini"]
+	path = app/assets/css/naranju-mini
+	url = https://github.com/banquito/naranju-mini
