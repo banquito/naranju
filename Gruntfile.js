@@ -37,8 +37,8 @@ module.exports = function(grunt) {
         browserSync: {
             bsFiles: {
                 src: [
-                    'dist/*.html',
                     'dist/**/*.html',
+                    'dist/*.html',
                     'dist/assets/**/*.css',
                 ]
             },
@@ -46,7 +46,8 @@ module.exports = function(grunt) {
                 watchTask: true,
                 server: {
                     baseDir: "./dist"
-                }
+                },
+                reloadDelay: 300
             }
         },
         jade: {
@@ -84,17 +85,23 @@ module.exports = function(grunt) {
             css: {
                 files: ['app/assets/css/*.styl', 'app/assets/css/**/*.styl'],
                 tasks: ['stylus'],
-                
+                options: {
+                    debounceDelay: 250
+                }
             },
             views: {
                 files: ['app/views/*.jade', 'app/views/**/*.jade', 'app/models/**/*.json', 'app/models/*.json'],
                 tasks: ['jade'],
-                
+                options: {
+                    debounceDelay: 250
+                }
             },
             js: {
                 files: ['app/assets/js/*.js', 'app/assets/js/**/*.js'],
                 tasks: ['uglify'],
-                
+                options: {
+                    debounceDelay: 250
+                }                
             }
         },
 
