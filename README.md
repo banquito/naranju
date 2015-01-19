@@ -47,25 +47,18 @@ Naranju
 
 ##### En consola:
 
-    git clone https://github.com/banquito/naranju.git
+    git clone --recursive https://github.com/banquito/naranju.git
     cd naranju
     npm install
-    grunt build
-    grunt server watch
+    grunt
+
+** Se debe tener instalado grunt-cli**
+
+    sudo npm install -g grunt-cli
 
 ##### Navegar: 
 
     http://localhost:3000
-
-Correr la aplicacion en heroku.com:
-
-    heroku apps:create [example]
-    git push heroku master
-    heroku open
-
-Miralo funcionando en [heroku](http://naranju.herokuapp.com)
-
-Si necesitas ayuda con esto, [acá está la documentación de heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
 
 ## Instrucciones para trabajar con stylus en naranju
 
