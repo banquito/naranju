@@ -2,6 +2,10 @@ include elements/gallery
 include elements/forms
 include elements/slider
 include elements/nav
+
+block vars
+    - base_url = './'
+
 doctype html
 html(lang="en")
   include includes/head
@@ -10,5 +14,6 @@ html(lang="en")
     #page
       .wrapper
         block nav
-      block content
+          +nav('nav', global.nav)
+        block content
       include includes/foot

@@ -1,9 +1,6 @@
 { 
   "nav": [ 
     {"link":"/", "name":"Home"},
-    {"link":"/docs/", "name":"Documentation"},
-    {"link":"/descargar.html", "name":"Download"},
-    {"link":"/es/#lang", "name":"Español"},
     {"link":"/examples/", "name":"Examples"}
   ],
   "navejemplos": [ 

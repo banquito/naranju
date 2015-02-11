@@ -7,23 +7,23 @@ head
   meta(name='viewport', content='width=device-width,initial-scale=1')
   meta(name="keywords", content="jade, node, nodejs, stylus, lesscss, jadejs, framework, css, css3, html, html5")
   meta(name="description", content=global.page.description)
-  link(href='assets/img/favicon.ico', rel='shortcut icon', type='image/x-icon')
-  link(href="assets/css/style.css", rel="stylesheet", type="text/css", media="all")
+  link(href=base_url + 'assets/img/favicon.ico', rel='shortcut icon', type='image/x-icon')
+  link(href=base_url + "assets/css/style.css", rel="stylesheet", type="text/css", media="all")
  
   meta(property='og:title', content=global.page.title)
   meta(property='og:description', content=global.page.description)
   meta(property='og:type', content='website')
   meta(property='og:url', content='APP_URL')
-  meta(property='og:image', content='/assets/img/favicon.png')
+  meta(property='og:image', content=base_url + '/assets/img/favicon.png')
   meta(property='og:site_name', content=global.page.title)
   meta(property='fb:admins', content='APP_ADMIN')
 
-  script(src="assets/js/lib/jquery-2.0.3.min.js", type="text/javascript")
-  script(src="assets/js/lib/jquery.tools.min.js", type="text/javascript")
-  script(src="assets/js/lib/jquery.flexslider.js", type="text/javascript")
-  script(src="assets/js/script.js", type="text/javascript")
+  script(src=base_url + "assets/js/lib/jquery-2.0.3.min.js", type="text/javascript")
+  script(src=base_url + "assets/js/lib/jquery.tools.min.js", type="text/javascript")
+  script(src=base_url + "assets/js/lib/jquery.flexslider.js", type="text/javascript")
+  script(src=base_url + "assets/js/script.js", type="text/javascript")
   //if lte IE8
-    script(src='assets/js/lib/html5.js')
+    script(src=base_url + 'assets/js/lib/html5.js')
 
   script.
     var _gaq=[['_setAccount','UA-XXX'],['_trackPageview']];

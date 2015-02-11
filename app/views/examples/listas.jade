@@ -1,7 +1,9 @@
-extends ../_layouts/sidenav
+extends ../_layouts/default
+
+block vars
+  - base_url = '../'
+
 block nav
-  header#header
-    h1.logo= global.page.title
   +nav('nav', global.nav)
   +nav('nav-light', global.navejemplos)
 block content
