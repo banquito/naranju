@@ -22,7 +22,7 @@ mixin formCheckbox(id, label, value)
   label(for=id)= label
 
 mixin search_form(action, label)
-  form(action=action).search-form
-    p
+  form(action=action).form--search
+    p.form__group
       input(type="search", name="search", id="search", placeholder=label)
-      button(type=submit)
+      button(type=submit)= label
