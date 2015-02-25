@@ -35,7 +35,7 @@
   "user": {
     "name": "User Name",
     "provider": "github",
-    "image": "/assets/upload/user.png"
+    "image": "/assets/media/upload/user.png"
   },
   "page": {
     "title": "naranju",

@@ -102,16 +102,25 @@ module.exports = function(grunt) {
                 options: {
                     debounceDelay: 250
                 }                
+            },
+            media: {
+                files: ['app/assets/media/*', 'app/assets/media/**/*'],
+                tasks: ['copy'],
+                options: {
+                    debounceDelay: 250
+                }                
             }
         },
 
         clean: {
-            dist: ["dist/assets/css/*.css", "dist/assets/js/*.js"]
+            dist: ["dist/assets/css/*.css", "dist/assets/js/*.js", "dist/assets/media"]
         },
         uglify: {
             dist: {
                 files: {
-                    'dist/assets/js/bootstrap.min.js': [
+                    'dist/assets/js/lib.min.js': [
+                        'bower_components/components-modernizr/modernizr.js',
+                        'bower_components/jquery/dist/jquery.js',
                         'app/assets/js/lib/*.js',
                         'app/assets/js/lib/**/*.js'
                     ],
@@ -121,7 +130,14 @@ module.exports = function(grunt) {
                 }
             }
         },
-
+        copy: {
+          main: {
+            expand: true,
+            cwd: 'app/assets/media/',
+            src: '**',
+            dest: 'dist/assets/media',
+          },
+        },
     });
 
     // Load plugins here
@@ -131,9 +147,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks("grunt-contrib-jade");
     grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('default', ["browserSync", "watch"]);
 
-    grunt.registerTask('build', ['jade', 'clean', 'stylus', 'uglify']);
+    grunt.registerTask('build', ['jade', 'clean', 'stylus', 'uglify', 'copy']);
 
 };
