@@ -7,7 +7,10 @@ mixin nav(style, items)
           +nav('subnav', item.nav)
 
 mixin tabs(items)
-  +nav('tabs',items)
+  ul(class="tabs")
+    - each item in items
+      li.tabs__item
+        a.tabs__title(href=item.link)= item.name
   .panes
     - each item in items
       div!=item.content

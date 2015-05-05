@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                 ],
                 files: [{
                     cwd: "app/assets/css",
-                    src: "*.styl",
+                    src: "[^_]*.styl",
                     dest: "dist/assets/css",
                     expand: true,
                     ext: ".css"

@@ -1,4 +1,4 @@
 mixin gallery(col, items)
-  ul(class='gallery gallery'+col)
+  ul(class='gallery gallery--'+col)
     - each item in items
       li.gallery__item: img.gallery__img(src=item)
