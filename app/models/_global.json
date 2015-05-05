@@ -7,8 +7,7 @@
     {"link":"/examples/index.html", "name":"Textos"},
     {"link":"/examples/gallery.html", "name":"Multimedia"},
     {"link":"/examples/listas.html", "name":"Listas"},
-    {"link":"/examples/contacto.html", "name":"Formularios"},
-    {"link":"/examples/tools.html", "name":"Herramientas"}
+    {"link":"/examples/contacto.html", "name":"Formularios"}
   ],
   "htmlbase": [ 
     {"link":"#heading", "name":"heading"},
