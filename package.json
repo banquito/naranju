@@ -1,6 +1,6 @@
 {
   "name": "naranju",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "devDependencies": {
     "grunt": "*",
     "grunt-browser-sync": "*",
