@@ -1,55 +1,22 @@
-@import '_nav'
 @import '_github'
 
 body
-  background $backgroundColor
+  +below(2)
+    background: $linkColor
+    a
+      color: #fff
 
-section#home
-  color #fff
-  transition all 500ms ease-in 500ms
-  border-box()
-  padding 5% 5% 0 0
-  
+.wrapper, .footer
+  center()
+  padding: 20px
+
+.wrapper
   h1
-    color $kuler4
-    margin 0% 0 3%
-    font-size 6.5rem
-    margin-bottom 0
-  
-  h1, 
-  h2, 
-  h3, 
-  h4, 
-  h5, 
-  h6
-    //opacity 0.4
-    position relative
-    left 10%
-    width 80%
-  
+    font-weight: bold
+    text-transform: uppercase
+  h1, h2, h3, p
+    +below(2)
+      color: #fff  
   p
-    //opacity 0.1
-    position relative
-    left 10%
-    width 80%
-    color $textColor
-  
-  h1
-    transition (all 200ms ease-in-out)
-  
-  h2
-    transition (all 100ms ease-in-out 200ms)
-    color $kuler1
-    margin-top 0
-  
-  h3
-    transition (all 100ms ease-in-out 350ms)
-    color $kuler2
-    font-size 4.5rem
-  
-  p
-    transition (all 100ms ease-in-out 500ms)
-    width:600px
-  
-  &:hover
-    h1, h2, h3, h4, h5, h6, p
+    font-size: 14px
+    clear: left

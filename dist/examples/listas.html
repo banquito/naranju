@@ -26,132 +26,130 @@
     </script>
   </head>
   <body>
-    <div id="page">
+    <div class="grid">
+      <ul class="nav">
+        <li><a href="/">Inicio</a>
+        </li>
+        <li><a href="/examples/">Ejemplos</a>
+        </li>
+      </ul>
+      <ul class="nav--light">
+        <li><a href="/examples/index.html">Textos</a>
+        </li>
+        <li><a href="/examples/gallery.html">Multimedia</a>
+        </li>
+        <li><a href="/examples/listas.html">Listas</a>
+        </li>
+        <li><a href="/examples/contacto.html">Formularios</a>
+        </li>
+      </ul>
       <div class="wrapper">
-        <ul class="nav">
-          <li><a href="/">Home</a>
-          </li>
-          <li><a href="/examples/">Ejemplos</a>
-          </li>
-        </ul>
-        <ul class="nav-light">
-          <li><a href="/examples/index.html">Textos</a>
-          </li>
-          <li><a href="/examples/gallery.html">Multimedia</a>
-          </li>
-          <li><a href="/examples/listas.html">Listas</a>
-          </li>
-          <li><a href="/examples/contacto.html">Formularios</a>
-          </li>
-        </ul>
-        <div class="wrapper">
-          <div class="row">
-            <ol class="breadcrumb breadcrumb--path">
-              <li class="breadcrumb__root"><a href="#">naranju</a></li>
-              <li><a href="#">ejemplos</a></li>
-              <li><a href="#">listas</a></li>
-            </ol>
-          </div>
-          <div class="row">
-            <section id="content" class="span3 span-768-6">
-              <h3>Tabs</h3>
-              <ul class="tabs">
-                <li class="tabs__item"><a href="#" class="tabs__title">Tab 1</a></li>
-                <li class="tabs__item"><a href="#" class="tabs__title">Tab 2</a></li>
-                <li class="tabs__item"><a href="#" class="tabs__title">Tab 3</a></li>
-                <li class="tabs__item"><a href="#" class="tabs__title">Tab 4</a></li>
+        <div class="row">
+          <ol class="breadcrumb breadcrumb--path">
+            <li class="breadcrumb__root"><a href="#">naranju</a></li>
+            <li><a href="#">ejemplos</a></li>
+            <li><a href="#">listas</a></li>
+          </ol>
+        </div>
+        <div class="row">
+          <section id="content" class="span3 span-768-6">
+            <h3>Tabs</h3>
+            <ul class="tabs">
+              <li class="tabs__item"><a href="#" class="tabs__title">Tab 1</a></li>
+              <li class="tabs__item"><a href="#" class="tabs__title">Tab 2</a></li>
+              <li class="tabs__item"><a href="#" class="tabs__title">Tab 3</a></li>
+              <li class="tabs__item"><a href="#" class="tabs__title">Tab 4</a></li>
+            </ul>
+          </section>
+          <section id="content" class="span3 span-768-6">
+            <h3>Unordered lists
+              <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipisicing elit</li>
+                <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+                <li>Ut enim ad minim veniam</li>
               </ul>
-            </section>
-            <section id="content" class="span3 span-768-6">
-              <h3>Unordered lists
-                <ul>
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>Consectetur adipisicing elit</li>
-                  <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-                  <li>Ut enim ad minim veniam</li>
-                </ul>
-              </h3>
-            </section>
-            <section id="content" class="span3 span-768-6">
-              <h3>Ordered lists
-                <ol>
-                  <li>Consectetur adipisicing elit</li>
-                  <li>Sed do eiusmod tempor incididunt ut labore</li>
-                  <li>Et dolore magna aliqua</li>
-                </ol>
-              </h3>
-            </section>
-            <section class="span3 span-768-6">
-              <h3>Definition lists
-                <dl>
-                  <dt>Lorem ipsum dolor sit amet</dt>
-                  <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt asdas ut labore et dolore magna aliqua.</dd>
-                  <dt>Ut enim ad minim veniam</dt>
-                  <dd>Quis nostrud exercitation ullamco <abbr title="algo">a</abbr> laboris nisi ut aliquip ex ea commodo consequat.</dd>
-                  <dt>Duis aute irure dolor</dt>
-                  <dd>In reprehenderit in voluptate velit <em>esse cillum dolore</em> eu fugiat nulla pariatur.</dd>
-                  <dt>Excepteur sint occaecat</dt></dt>
-                  <dd>Cupidatat non proident, <strong>sunt in culpa qui officia</strong> deserunt mollit anim id est laborum.</dd>
-                </dl>
-              </h3>
-            </section>
-          </div>
-          <div class="row">
-            <section id="content" class="span6 span-768-6">
-              <h3>Vertical nav</h3>
-              <ul class="nav-vertical">
-                <li><a href="#">Lorem</a>
-                </li>
-                <li><a href="#">Lorem</a>
-                </li>
-                <li><a href="#">Lorem</a>
-                </li>
-                <li><a href="#">Lorem</a>
-                </li>
-              </ul>
-            </section>
-            <section id="content" class="span6 span-768-6">
-              <h3>Vertical nav light</h3>
-              <ul class="nav-vertical-light">
-                <li><a href="#">Lorem</a>
-                </li>
-                <li><a href="#">Lorem</a>
-                </li>
-                <li><a href="#">Lorem</a>
-                </li>
-                <li><a href="#">Lorem</a>
-                </li>
-              </ul>
-            </section>
-          </div>
-          <section class="span12"> 
-            <h3>Tables</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Item</th>
-                  <th>Quantity</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Lorem ipsum dolor</td>
-                  <td>1</td>
-                  <td>$10.00</td>
-                </tr>
-                <tr>
-                  <td>Adipisicing elit</td>
-                  <td>2</td>
-                  <td>$12.00</td>
-                </tr>
-              </tbody>
-            </table>
+            </h3>
+          </section>
+          <section id="content" class="span3 span-768-6">
+            <h3>Ordered lists
+              <ol>
+                <li>Consectetur adipisicing elit</li>
+                <li>Sed do eiusmod tempor incididunt ut labore</li>
+                <li>Et dolore magna aliqua</li>
+              </ol>
+            </h3>
+          </section>
+          <section class="span3 span-768-6">
+            <h3>Definition lists
+              <dl>
+                <dt>Lorem ipsum dolor sit amet</dt>
+                <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt asdas ut labore et dolore magna aliqua.</dd>
+                <dt>Ut enim ad minim veniam</dt>
+                <dd>Quis nostrud exercitation ullamco <abbr title="algo">a</abbr> laboris nisi ut aliquip ex ea commodo consequat.</dd>
+                <dt>Duis aute irure dolor</dt>
+                <dd>In reprehenderit in voluptate velit <em>esse cillum dolore</em> eu fugiat nulla pariatur.</dd>
+                <dt>Excepteur sint occaecat</dt></dt>
+                <dd>Cupidatat non proident, <strong>sunt in culpa qui officia</strong> deserunt mollit anim id est laborum.</dd>
+              </dl>
+            </h3>
           </section>
         </div>
+        <div class="row">
+          <section id="content" class="span6 span-768-6">
+            <h3>Vertical nav</h3>
+            <ul class="nav-vertical">
+              <li><a href="#">Lorem</a>
+              </li>
+              <li><a href="#">Lorem</a>
+              </li>
+              <li><a href="#">Lorem</a>
+              </li>
+              <li><a href="#">Lorem</a>
+              </li>
+            </ul>
+          </section>
+          <section id="content" class="span6 span-768-6">
+            <h3>Vertical nav light</h3>
+            <ul class="nav-vertical--light">
+              <li><a href="#">Lorem</a>
+              </li>
+              <li><a href="#">Lorem</a>
+              </li>
+              <li><a href="#">Lorem</a>
+              </li>
+              <li><a href="#">Lorem</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <section class="span12"> 
+          <h3>Tables</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lorem ipsum dolor</td>
+                <td>1</td>
+                <td>$10.00</td>
+              </tr>
+              <tr>
+                <td>Adipisicing elit</td>
+                <td>2</td>
+                <td>$12.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </div>
-      <footer class="clear">
-        <p class="legal">Copyright &copy; 2013 <a href="http://www.banquito.com.ar/">Banquito</a> <br>Licensed under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+      <footer class="footer">
+        <p class="footer__content">Copyright &copy; 2013 <a href="http://www.banquito.com.ar/">Banquito</a> <br>Licensed under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
       </footer>
       <div class="github-fork-ribbon-wrapper right">
         <div class="github-fork-ribbon"><a href="https://github.com/banquito/naranju">Fork me on GitHub</a></div>

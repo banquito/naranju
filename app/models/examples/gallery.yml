@@ -11,10 +11,6 @@ gallery:
   - "/assets/media/upload/4.jpeg"
   - "/assets/media/upload/5.jpeg"
   - "/assets/media/upload/6.jpeg"
-slides: 
-  - "/assets/media/upload/1_big.jpeg"
-  - "/assets/media/upload/2_big.jpeg"
-  - "/assets/media/upload/3_big.jpeg"
 thumbs: 
   - "/assets/media/upload/1.jpeg"
   - "/assets/media/upload/2.jpeg"

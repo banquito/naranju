@@ -1,7 +1,7 @@
 nav: 
   - 
     link: "/"
-    name: "Home"
+    name: "Inicio"
   - 
     link: "/examples/"
     name: "Ejemplos"
@@ -77,75 +77,3 @@ user:
 page: 
   title: "naranju"
   decription: "framework frontend: nodejs + jade + stylus"
-  developer: "Jonathan Katz"
-es: 
-  nav: 
-    - 
-      link: "/es"
-      name: "Inicio"
-    - 
-      link: "/es/docs/"
-      name: "Documentación"
-    - 
-      link: "/es/descargar.html"
-      name: "Descargar"
-    - 
-      link: "/#lang"
-      name: "English"
-    - 
-      link: "/examples"
-      name: "Ejemplos"
-  htmlbase: 
-    - 
-      link: "#titulos"
-      name: "titulos"
-    - 
-      link: "#parrafos"
-      name: "parrafos"
-    - 
-      link: "#listas"
-      name: "listas"
-    - 
-      link: "#tablas"
-      name: "tablas"
-    - 
-      link: "#markdown"
-      name: "Markdown"
-  elementos: 
-    - 
-      link: "#formularios"
-      name: "formularios"
-    - 
-      link: "#galeria"
-      name: "galeria"
-    - 
-      link: "#navegacion"
-      name: "navegación"
-    - 
-      link: "#pasador"
-      name: "pasador"
-    - 
-      link: "#carrusel"
-      name: "carrusel"
-  documentos: 
-    - 
-      link: "#caracter-sticas"
-      name: "características"
-    - 
-      link: "#recursos-javascript"
-      name: "recursos javascript"
-    - 
-      link: "#recursos-stylus"
-      name: "recursos stylus"
-    - 
-      link: "#instalaci-n"
-      name: "instalación"
-    - 
-      link: "#instrucciones-para-trabajar-con-stylus-en-naranju"
-      name: "instrucciones"
-    - 
-      link: "#jade"
-      name: "como usar jade"
-  page: 
-    title: "stylus"
-    decription: "framework frontend: nodejs + jade + stylus"

@@ -5,7 +5,7 @@ block vars
 
 block nav
   +nav('nav', global.nav)
-  +nav('nav-light', global.navejemplos)
+  +nav('nav--light', global.navejemplos)
   header#header
     h1.logo= global.page.title
 
@@ -16,25 +16,25 @@ block content
       blockquote
        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     ul.pagination
-      li.prev
-        a(href="#") «
+      li
+        a.pagination__link.pagination__link--prev(href="#") «
       li 
-        a(href="#") 1
+        a.pagination__link(href="#") 1
       li 
-        a(href="#") 2
+        a.pagination__link(href="#") 2
       li 
-        a(href="#").active 3
+        a.pagination__link.pagination__link--active(href="#") 3
       li 
-        a(href="#") 4
+        a.pagination__link(href="#") 4
       li 
-        a(href="#") 5
+        a.pagination__link(href="#") 5
       li ...
       li 
-        a(href="#") 9
+        a.pagination__link(href="#") 9
       li 
-        a(href="#") 1
-      li.next
-        a(href="#") »
+        a.pagination__link(href="#") 1
+      li
+        a.pagination__link.pagination__link--next(href="#") »
 
     .clearfix
       .span4

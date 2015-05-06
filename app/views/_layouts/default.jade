@@ -10,9 +10,8 @@ html(lang="en")
   include includes/head
   body
     
-    #page
-      .wrapper
-        block nav
-          +nav('nav', global.nav)
-        block content
+    .grid
+      block nav
+        +nav('nav', global.nav)
+      block content
       include includes/foot
