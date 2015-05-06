@@ -58,11 +58,14 @@ module.exports = function(grunt) {
                     data: function(dest, src) {
                         var src = String(src)
                             .replace("app/views", "app/models")
-                            .replace(".jade", ".json");
-                        var global = grunt.file.readJSON("app/models/_global.json")
+                            .replace(".jade", ".yml");
+                        var global = {};
+
+                        global = grunt.file.readYAML("app/models/_global.yml");
 
                         if (grunt.file.exists(src)) {
-                            var data = grunt.file.readJSON(src);
+                            var data = grunt.file.readYAML(src);
+                            if(!data) data = {}; 
                             data.global = global;
                             return data;
                         }
@@ -90,7 +93,7 @@ module.exports = function(grunt) {
                 }
             },
             views: {
-                files: ['app/views/*.jade', 'app/views/**/*.jade', 'app/models/**/*.json', 'app/models/*.json'],
+                files: ['app/views/*.jade', 'app/views/**/*.jade', 'app/models/**/*.yml', 'app/models/*.yml'],
                 tasks: ['jade'],
                 options: {
                     debounceDelay: 250
