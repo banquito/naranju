@@ -26,25 +26,25 @@
     </script>
   </head>
   <body>
+    <ul class="nav">
+      <li><a href="/">Inicio</a>
+      </li>
+      <li><a href="/examples/">Ejemplos</a>
+      </li>
+    </ul>
+    <ul class="nav--lighten">
+      <li><a href="/examples/index.html">Textos</a>
+      </li>
+      <li><a href="/examples/gallery.html">Multimedia</a>
+      </li>
+      <li><a href="/examples/listas.html">Listas</a>
+      </li>
+      <li><a href="/examples/contacto.html">Formularios</a>
+      </li>
+    </ul>
     <div class="grid">
-      <ul class="nav">
-        <li><a href="/">Inicio</a>
-        </li>
-        <li><a href="/examples/">Ejemplos</a>
-        </li>
-      </ul>
-      <ul class="nav--light">
-        <li><a href="/examples/index.html">Textos</a>
-        </li>
-        <li><a href="/examples/gallery.html">Multimedia</a>
-        </li>
-        <li><a href="/examples/listas.html">Listas</a>
-        </li>
-        <li><a href="/examples/contacto.html">Formularios</a>
-        </li>
-      </ul>
-      <div class="wrapper">
-        <section id="content" class="span5 span-768-6">
+      <div class="grid">
+        <section id="content" class="grid__col-1-2 grid__col--tablet grid__col--mobile">
           <h3>Galeria a 6 columnas</h3>
           <ul class="gallery gallery--6">
             <li class="gallery__item"><img src="/assets/media/upload/1.jpeg" class="gallery__img"/></li>
@@ -61,7 +61,7 @@
             <li class="gallery__item"><img src="/assets/media/upload/6.jpeg" class="gallery__img"/></li>
           </ul>
         </section>
-        <div class="span7 span-768-6">
+        <section class="grid__col-1-2 grid__col--tablet grid__col--mobile">
           <h3>Galeria a 4 columnas</h3>
           <ul class="gallery gallery--4">
             <li class="gallery__item"><img src="/assets/media/upload/1.jpeg" class="gallery__img"/></li>
@@ -77,7 +77,7 @@
             <li class="gallery__item"><img src="/assets/media/upload/5.jpeg" class="gallery__img"/></li>
             <li class="gallery__item"><img src="/assets/media/upload/6.jpeg" class="gallery__img"/></li>
           </ul>
-        </div>
+        </section>
       </div>
       <footer class="footer">
         <p class="footer__content">Copyright &copy; 2013 <a href="http://www.banquito.com.ar/">Banquito</a> <br>Licensed under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>

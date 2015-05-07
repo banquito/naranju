@@ -5,11 +5,11 @@ block vars
 
 block nav
   +nav('nav', global.nav)
-  +nav('nav--light', global.navejemplos)
+  +nav('nav--lighten', global.navejemplos)
 
 block content
-  .wrapper
-    section#content.span7
+  .grid
+    section#content.grid__col-1-2.grid__col--tablet.grid__col--mobile
       h3 Form horizontal
       form.form
         p.form__group: +formInput('text', 'nombre', 'Nombre', '')
@@ -19,7 +19,7 @@ block content
         p.form__group.form__group--checkbox: +formRadio('sexo', [{'label':'Hombre','value':'h'},{'label':'Mujer','value':'m'}])
         p.form__group.form__group--checkbox: +formCheckbox('info', 'Acepto los términos y condiciones', '1')
         p.form__group.form__group--checkbox: button.button-big Enviar
-    section#content.span5
+    section#content.grid__col-1-2.grid__col--tablet.grid__col--mobile
       h3 Form vertical
       form.form.form--vertical
         p.form__group: +formInput('text', 'nombrev', 'Nombre', '')
@@ -29,20 +29,23 @@ block content
         p.form__group.form__group--checkbox: +formRadio('sexov', [{'label':'Hombre','value':'h'},{'label':'Mujer','value':'m'}])
         p.form__group.form__group--checkbox: +formCheckbox('infov', 'Acepto los términos y condiciones', '1')
         p.form__group.form__group--checkbox: button.button-big Enviar
-  .wrapper
-    section.span12
+  .grid
+    section.grid__col
       +search_form('#', 'Buscar')
-  .wrapper
-    section.span12
+  .grid
+    section.grid__col-1-4.grid__col-1-2--tablet.grid__col--mobile
       .flash.flash--error
         span Error:
         |  Reemplaza esta alerta por tu HTML.
+    section.grid__col-1-4.grid__col-1-2--tablet.grid__col-right--tablet.grid__col--mobile
       .flash.flash--success
         span Success:
         |  Reemplaza esta alerta por tu HTML.
+    section.grid__col-1-4.grid__col-1-2--tablet.grid__col--mobile
       .flash.flash--warning
         span Warning:
         |  Reemplaza esta alerta por tu HTML.
+    section.grid__col-1-4.grid__col-1-2--tablet.grid__col--mobile
       .flash.flash--notice
         span Notice:
         |  Reemplaza esta alerta por tu HTML.

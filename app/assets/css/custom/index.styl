@@ -1,22 +1,14 @@
 @import '_github'
-
-body
-  +below(2)
-    background: $linkColor
-    a
-      color: #fff
-
+  
 .wrapper, .footer
-  center()
+  @extend .grid__col
   padding: 20px
-
-.wrapper
+  box-sizing: border-box
   h1
     font-weight: bold
     text-transform: uppercase
   h1, h2, h3, p
     +below(2)
-      color: #fff  
+      color: #000
   p
     font-size: 14px
-    clear: left

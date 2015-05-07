@@ -9,9 +9,9 @@ doctype html
 html(lang="en")
   include includes/head
   body
-    
+    block nav
+      +nav('nav', global.nav)
     .grid
-      block nav
-        +nav('nav', global.nav)
+      
       block content
       include includes/foot

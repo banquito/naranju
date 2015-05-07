@@ -5,39 +5,40 @@ block vars
 
 block nav
   +nav('nav', global.nav)
-  +nav('nav--light', global.navejemplos)
+  +nav('nav--lighten', global.navejemplos)
   header#header
     h1.logo= global.page.title
 
 block content
-  .wrapper
-    .span12
+  .grid
+    .grid_colum
       h3 Blockquotes
       blockquote
        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    ul.pagination
-      li
-        a.pagination__link.pagination__link--prev(href="#") «
-      li 
-        a.pagination__link(href="#") 1
-      li 
-        a.pagination__link(href="#") 2
-      li 
-        a.pagination__link.pagination__link--active(href="#") 3
-      li 
-        a.pagination__link(href="#") 4
-      li 
-        a.pagination__link(href="#") 5
-      li ...
-      li 
-        a.pagination__link(href="#") 9
-      li 
-        a.pagination__link(href="#") 1
-      li
-        a.pagination__link.pagination__link--next(href="#") »
+      
+      ul.pagination
+        li
+          a.pagination__link.pagination__link--prev(href="#") «
+        li 
+          a.pagination__link(href="#") 1
+        li 
+          a.pagination__link(href="#") 2
+        li 
+          a.pagination__link.pagination__link--active(href="#") 3
+        li 
+          a.pagination__link(href="#") 4
+        li 
+          a.pagination__link(href="#") 5
+        li ...
+        li 
+          a.pagination__link(href="#") 9
+        li 
+          a.pagination__link(href="#") 10
+        li
+          a.pagination__link.pagination__link--next(href="#") »
 
-    .clearfix
-      .span4
+    .grid
+      .grid__col-1-3.grid__col-1-2--tablet.grid__col--mobile
         :markdown
           #Heading h1
           Aliquam eu magna augue. Etiam ultrices, dolor ac consectetur eleifend, justo est consequat leo, et dapibus nisl quam nec diam. Sed aliquet malesuada egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -45,8 +46,10 @@ block content
           Maecenas faucibus elit eu erat euismod tincidunt. Nunc adipiscing aliquam malesuada. Aliquam eleifend ullamcorper tempor. Donec interdum justo sit amet nisi congue fringilla. Nam bibendum bibendum massa, eu gravida nunc tincidunt vitae.
           
           Duis leo nulla, accumsan ut venenatis vel, consequat ac lectus. Donec ac quam ac nisi porttitor vehicula non ultricies lacus. Vestibulum a dictum velit. Aenean egestas laoreet eros non imperdiet. Vivamus turpis lectus, sagittis eu pulvinar in, facilisis eu nisi.
+
         a.more(href="#") More
-      .span4
+
+      .grid__col-1-3.grid__col-1-2--tablet.grid__col-right--tablet.grid__col--mobile
         :markdown
           ##Heading h2
           Aliquam eu magna augue. Etiam ultrices, dolor ac consectetur eleifend, justo est consequat leo, et dapibus nisl quam nec diam. Sed aliquet malesuada egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -54,8 +57,10 @@ block content
           Maecenas faucibus elit eu erat euismod tincidunt. Nunc adipiscing aliquam malesuada. Aliquam eleifend ullamcorper tempor. Donec interdum justo sit amet nisi congue fringilla. Nam bibendum bibendum massa, eu gravida nunc tincidunt vitae.
           
           Duis leo nulla, accumsan ut venenatis vel, consequat ac lectus. Donec ac quam ac nisi porttitor vehicula non ultricies lacus. Vestibulum a dictum velit. Aenean egestas laoreet eros non imperdiet. Vivamus turpis lectus, sagittis eu pulvinar in, facilisis eu nisi.
+
         a.more(href="#") More
-      .span4
+
+      .grid__col-1-3.grid__col--tablet.grid__col--mobile
         :markdown
           ###Heading h3
           Aliquam eu magna augue. Etiam ultrices, dolor ac consectetur eleifend, justo est consequat leo, et dapibus nisl quam nec diam. Sed aliquet malesuada egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -63,9 +68,11 @@ block content
           Maecenas faucibus elit eu erat euismod tincidunt. Nunc adipiscing aliquam malesuada. Aliquam eleifend ullamcorper tempor. Donec interdum justo sit amet nisi congue fringilla. Nam bibendum bibendum massa, eu gravida nunc tincidunt vitae.
           
           Duis leo nulla, accumsan ut venenatis vel, consequat ac lectus. Donec ac quam ac nisi porttitor vehicula non ultricies lacus. Vestibulum a dictum velit. Aenean egestas laoreet eros non imperdiet. Vivamus turpis lectus, sagittis eu pulvinar in, facilisis eu nisi.
+
         a.more(href="#") More
-    .clearfix
-      .span4
+
+    .grid
+      .grid__col-1-4.grid__col-1-3--tablet.grid__col--mobile
         :markdown
           ####Heading h4
           Aliquam eu magna augue. Etiam ultrices, dolor ac consectetur eleifend, justo est consequat leo, et dapibus nisl quam nec diam. Sed aliquet malesuada egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -73,8 +80,10 @@ block content
           Maecenas faucibus elit eu erat euismod tincidunt. Nunc adipiscing aliquam malesuada. Aliquam eleifend ullamcorper tempor. Donec interdum justo sit amet nisi congue fringilla. Nam bibendum bibendum massa, eu gravida nunc tincidunt vitae.
           
           Duis leo nulla, accumsan ut venenatis vel, consequat ac lectus. Donec ac quam ac nisi porttitor vehicula non ultricies lacus. Vestibulum a dictum velit. Aenean egestas laoreet eros non imperdiet. Vivamus turpis lectus, sagittis eu pulvinar in, facilisis eu nisi.
+
         a.more(href="#") More
-      .span4
+
+      .grid__col-1-4.grid__col-1-3--tablet.grid__col--mobile
         :markdown
           #####Heading h5
           Aliquam eu magna augue. Etiam ultrices, dolor ac consectetur eleifend, justo est consequat leo, et dapibus nisl quam nec diam. Sed aliquet malesuada egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -82,8 +91,10 @@ block content
           Maecenas faucibus elit eu erat euismod tincidunt. Nunc adipiscing aliquam malesuada. Aliquam eleifend ullamcorper tempor. Donec interdum justo sit amet nisi congue fringilla. Nam bibendum bibendum massa, eu gravida nunc tincidunt vitae.
           
           Duis leo nulla, accumsan ut venenatis vel, consequat ac lectus. Donec ac quam ac nisi porttitor vehicula non ultricies lacus. Vestibulum a dictum velit. Aenean egestas laoreet eros non imperdiet. Vivamus turpis lectus, sagittis eu pulvinar in, facilisis eu nisi.
+
         a.more(href="#") More
-      .span4
+
+      .grid__col-1-2.grid__col-1-3--tablet.grid__col--mobile
         :markdown
           ######Heading h6
           Aliquam eu magna augue. Etiam ultrices, dolor ac consectetur eleifend, justo est consequat leo, et dapibus nisl quam nec diam. Sed aliquet malesuada egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -91,4 +102,5 @@ block content
           Maecenas faucibus elit eu erat euismod tincidunt. Nunc adipiscing aliquam malesuada. Aliquam eleifend ullamcorper tempor. Donec interdum justo sit amet nisi congue fringilla. Nam bibendum bibendum massa, eu gravida nunc tincidunt vitae.
           
           Duis leo nulla, accumsan ut venenatis vel, consequat ac lectus. Donec ac quam ac nisi porttitor vehicula non ultricies lacus. Vestibulum a dictum velit. Aenean egestas laoreet eros non imperdiet. Vivamus turpis lectus, sagittis eu pulvinar in, facilisis eu nisi.
+
         a.more(href="#") More
