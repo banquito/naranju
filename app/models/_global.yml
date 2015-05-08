@@ -1,79 +1,11 @@
 nav: 
   - 
-    link: "/"
+    link: "index.html"
     name: "Inicio"
   - 
-    link: "/examples/"
+    link: "ejemplo.html"
     name: "Ejemplos"
 
-navejemplos: 
-  - 
-    link: "/examples/index.html"
-    name: "Textos"
-  - 
-    link: "/examples/gallery.html"
-    name: "Multimedia"
-  - 
-    link: "/examples/listas.html"
-    name: "Listas"
-  - 
-    link: "/examples/contacto.html"
-    name: "Formularios"
-htmlbase: 
-  - 
-    link: "#heading"
-    name: "heading"
-  - 
-    link: "#paragraph"
-    name: "paragraph"
-  - 
-    link: "#list"
-    name: "list"
-  - 
-    link: "#tables"
-    name: "tables"
-  - 
-    link: "#markdown"
-    name: "markdown"
-elementos: 
-  - 
-    link: "#forms"
-    name: "forms"
-  - 
-    link: "#gallery"
-    name: "gallery"
-  - 
-    link: "#navigation"
-    name: "navigation"
-  - 
-    link: "#slider"
-    name: "slider"
-  - 
-    link: "#carrusel"
-    name: "carrusel"
-documentos: 
-  - 
-    link: "#characteristics"
-    name: "characteristics"
-  - 
-    link: "#javascript-resources"
-    name: "javascript resources"
-  - 
-    link: "#stylus-resources"
-    name: "stylus resources"
-  - 
-    link: "#installation"
-    name: "installation"
-  - 
-    link: "#how-to-work-with-stylus-in-naranju"
-    name: "how to work with stylus"
-  - 
-    link: "#jade"
-    name: "jade"
-user: 
-  name: "User Name"
-  provider: "github"
-  image: "/assets/media/upload/user.png"
 page: 
   title: "naranju"
   decription: "framework frontend: nodejs + jade + stylus"

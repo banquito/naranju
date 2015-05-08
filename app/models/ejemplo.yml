@@ -1,3 +1,16 @@
+subnav: 
+  - 
+    link: "#"
+    name: "Textos"
+  - 
+    link: "#galerias"
+    name: "Multimedia"
+  - 
+    link: "#formularios"
+    name: "Formularios"
+  - 
+    link: "#listas"
+    name: "Listas"
 gallery: 
   - "/assets/media/upload/1.jpeg"
   - "/assets/media/upload/2.jpeg"
@@ -18,3 +31,20 @@ thumbs:
   - "/assets/media/upload/4.jpeg"
   - "/assets/media/upload/5.jpeg"
   - "/assets/media/upload/6.jpeg"
+tabs: 
+  - 
+    link: "#"
+    name: "Tab 1"
+    content: "Este es el contenido del tab 1"
+  - 
+    link: "#"
+    name: "Tab 2"
+    content: "Lorem ipsum 2"
+  - 
+    link: "#"
+    name: "Tab 3"
+    content: "Este es el contenido del tab 3"
+  - 
+    link: "#"
+    name: "Tab 4"
+    content: "Este es el contenido del tab 3"
