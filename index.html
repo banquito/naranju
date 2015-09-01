@@ -2,65 +2,55 @@
 <html lang="en">
   <head>
     <title>naranju</title>
-    <base href="/naranju/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="keywords">
-    <meta name="description" content="naranju">
-    <link href="assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="keywords" content="jade, node, nodejs, stylus, lesscss, jadejs, framework, css, css3, html, html5">
+    <meta name="description">
+    <link href="./assets/media/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" media="all">
     <meta property="og:title" content="naranju">
     <meta property="og:description">
     <meta property="og:type" content="website">
     <meta property="og:url" content="APP_URL">
-    <meta property="og:image" content="/assets/img/favicon.png">
+    <meta property="og:image" content=".//assets/media/img/favicon.png">
     <meta property="og:site_name" content="naranju">
     <meta property="fb:admins" content="APP_ADMIN">
-    <script src="assets/js/lib/jquery-2.0.3.min.js" type="text/javascript"></script>
-    <script src="assets/js/lib/jquery.tools.min.js" type="text/javascript"></script>
-    <script src="assets/js/lib/jquery.flexslider.js" type="text/javascript"></script>
-    <script src="assets/js/script.js" type="text/javascript"></script>
-    <!--if lte IE8
-    script(src='assets/js/lib/html5.js')
-    
-    -->
+    <script src="./assets/js/lib.min.js" type="text/javascript"></script>
+    <script src="./assets/js/script.js" type="text/javascript"></script>
     <script>
-      var _gaq=[['_setAccount','UA-31441831-4'],['_trackPageview']];
+      var _gaq=[['_setAccount','UA-XXX'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul class="nav-site">
-          <li><a href="/naranju/">Home</a>
-          </li>
-          <li><a href="/naranju/docs/">Documentation</a>
-          </li>
-          <li><a href="/naranju/descargar.html">Download</a>
-          </li>
-          <li><a href="/naranju/es/#lang">Español</a>
-          </li>
-          <li><a href="/naranju/examples/">Examples</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <section id="home">
+    <ul class="nav">
+      <li><a href="index.html">Inicio</a>
+      </li>
+      <li><a href="ejemplo.html">Ejemplos</a>
+      </li>
+    </ul>
+    <section class="wrapper">
       <h1>Naranju</h1>
       <h2>Front End Integrated Development System</h2>
-      <h3>nodejs + jade + stylus</h3><p>As a result of being able to work templates with jade and styles with stylus, we got the urge to create a real time compilator.</p>
-<p>Naranju achieves the task and also creates a custom made environment to implement it.</p>
-<p>Bottom line, this is a MVC emulator without a controller.</p>
-<p>This allows data simulation, its integration to templates, and later on, the inclusion of views and styles to any kind of project.</p>
-<p>This is also a generator of stats sites since,</p>
-<p>as it compiles and shows in real time, it creates html and CSS files that can understand any server such as Apache, Nginx and Microsoft IIS.</p>
-<p>Either take a look at our <strong><a href="docs/">documentation</a></strong> or <strong><a href="descargar.html">check it out</a></strong>.</p>
+      <h3>[nodejs, jade, { stylus: [nib, jeet, rupture]}, sync]</h3><p><strong>As a result of being able to work templates with jade and styles with stylus, we got the urge to create a real time compilator.</strong></p>
+<p><strong>Naranju achieves the task and also creates a custom made environment to implement it.</strong></p>
+<p><strong>Bottom line, this is a MVC emulator without a controller.</strong></p>
+<p><strong>This allows data simulation, its integration to templates, and later on, the inclusion of views and styles to any kind of project.</strong></p>
+<p><strong>This is also a generator of stats sites since, as it compiles and shows in real time, it creates html and CSS files that can understand any server such as Apache, Nginx and Microsoft IIS.</strong></p>
+<p>Debido al interes de poder trabajar los templates con jade y los estilos con stylus, surgió la necesidad de tener un compilador en tiempo real.</p>
+<p>Naranju logra cumplir esta tarea y crear un entorno de desarrollo a medida para la misma.</p>
+<p>En definitiva, es un emulador de MVC pero sin controlador. Esto permite simular los datos, integrarlos al template y luego incluir las vistas y los estilos en cualquier proyecto.</p>
+<p>También es un generador de sitios estáticos, porque a medida que compila y muestra en tiempo real, crea los archivos html y css que entiende cualquier servidor como apache, nginx y hasta Microsoft IIS.</p>
 
     </section>
-    <!--include includes/foot_snippets-->
+    <footer class="footer">
+      <p class="footer__content">Copyright &copy; 2013 <a href="http://www.banquito.com.ar/">Banquito</a> <br>Licensed under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+    </footer>
+    <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon"><a href="https://github.com/banquito/naranju">Fork me on GitHub</a></div>
+    </div>
   </body>
 </html>
