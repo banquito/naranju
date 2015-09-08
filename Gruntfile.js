@@ -5,10 +5,15 @@
 'use strict';
 module.exports = function(grunt) {
 
+    var appConfig = {
+        app: require('./bower.json').appPath || 'app',
+        dist: 'dist'
+    };
+
     grunt.initConfig({
         server: {
             port: 3000,
-            base: './dist'
+            base: appConfig.dist
         },
         stylus: {
             compile: {
@@ -28,7 +33,7 @@ module.exports = function(grunt) {
                 files: [{
                     cwd: "app/assets/css",
                     src: "[^_]*.styl",
-                    dest: "dist/assets/css",
+                    dest: appConfig.dist + "/assets/css",
                     expand: true,
                     ext: ".css"
                 }]
@@ -37,15 +42,15 @@ module.exports = function(grunt) {
         browserSync: {
             bsFiles: {
                 src: [
-                    'dist/**/*.html',
-                    'dist/*.html',
-                    'dist/assets/**/*.css',
+                    appConfig.dist + '/**/*.html',
+                    appConfig.dist + '/*.html',
+                    appConfig.dist + '/assets/**/*.css',
                 ]
             },
             options: {
                 watchTask: true,
                 server: {
-                    baseDir: "./dist"
+                    baseDir: appConfig.dist
                 },
                 reloadDelay: 300
             }
@@ -77,7 +82,7 @@ module.exports = function(grunt) {
                 files: [{
                     cwd: "app/views",
                     src: ["**/*.jade", "!_layouts/**", "!**/_*.jade"],
-                    dest: "dist",
+                    dest: appConfig.dist,
                     expand: true,
                     ext: ".html"
                 }]
@@ -116,7 +121,11 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            dist: ["dist/assets/css/*.css", "dist/assets/js/*.js", "dist/assets/media"]
+            dist: [
+                appConfig.dist + "/assets/css/*.css", 
+                appConfig.dist + "/assets/js/*.js", 
+                appConfig.dist + "/assets/media"
+            ]
         },
         uglify: {
             dist: {
@@ -138,7 +147,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'app/assets/media/',
             src: '**',
-            dest: 'dist/assets/media',
+            dest: appConfig.dist + '/assets/media',
           },
         },
     });

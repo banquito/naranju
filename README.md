@@ -48,13 +48,13 @@ Naranju
     git clone --recursive https://github.com/banquito/naranju.git
     cd naranju
     npm install
+    bower install
     grunt
 
 ** Se debe tener instalado grunt-cli**
 
     sudo npm install -g grunt-cli
 
-##### Navegar: 
+##### Navegar:
 
     http://localhost:3000
-

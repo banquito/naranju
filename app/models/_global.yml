@@ -1,11 +1,12 @@
-nav: 
-  - 
+nav:
+  -
     link: "index.html"
     name: "Inicio"
-  - 
+  -
     link: "ejemplo.html"
     name: "Ejemplos"
 
-page: 
+page:
   title: "naranju"
   decription: "framework frontend: nodejs + jade + stylus"
+  keywords: "jade, node, nodejs, stylus, lesscss, jadejs, framework, css, css3, html, html5"
